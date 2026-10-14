@@ -1,0 +1,933 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#0d0f10">
+  <meta name="description" content="Домашние тренировки по расписанию: подходы, история и личные рекорды.">
+  <title>Свой темп — Workout & Calisthenics</title>
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20width%3D%2248%22%20height%3D%2248%22%20viewBox%3D%220%200%2048%2048%22%20role%3D%22img%22%20aria-label%3D%22%D0%A1%D0%B2%D0%BE%D0%B9%20%D1%82%D0%B5%D0%BC%D0%BF%20%E2%80%94%20%D0%B0%D1%82%D0%BB%D0%B5%D1%82%20%D0%BD%D0%B0%20%D1%82%D1%83%D1%80%D0%BD%D0%B8%D0%BA%D0%B5%22%3E%3Ctitle%3E%D0%A1%D0%B2%D0%BE%D0%B9%20%D1%82%D0%B5%D0%BC%D0%BF%3C%2Ftitle%3E%3Crect%20width%3D%2248%22%20height%3D%2248%22%20rx%3D%228%22%20fill%3D%22%23ff713c%22%2F%3E%3Cg%20fill%3D%22none%22%20stroke%3D%22%23141818%22%20stroke-width%3D%223.5%22%20stroke-linecap%3D%22round%22%20stroke-linejoin%3D%22round%22%3E%3Cpath%20d%3D%22M10%2012h28M15%2012v9l9%209%209-9v-9M24%2030v4m0%200-5%206m5-6%205%206%22%2F%3E%3Ccircle%20cx%3D%2224%22%20cy%3D%2221%22%20r%3D%223.5%22%2F%3E%3C%2Fg%3E%3C%2Fsvg%3E">
+  <style>
+:root{--bg:#0d0f10;--paper:#171a1b;--ink:#f4f4ee;--muted:#a5acaa;--line:#303536;--green:#ff713c;--lime:#ff713c;--soft:#23282a;--orange:#ff713c;--radius:12px;--shadow:none;color-scheme:dark}
+*{box-sizing:border-box}
+html{min-height:100%;background:var(--bg);scroll-behavior:smooth}
+body{margin:0;min-height:100vh;background:radial-gradient(ellipse at 90% 0%,#38211666,transparent 45%),var(--bg);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:15px;line-height:1.45}
+button,input,select{font:inherit}button{cursor:pointer;border:0}button:disabled{cursor:default}button,a,input,select{-webkit-tap-highlight-color:transparent}
+button:focus-visible,a:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--orange);outline-offset:3px}a{color:inherit}
+.shell{width:100%;max-width:none;min-height:100vh;margin:0;padding:0 clamp(18px,3.1vw,68px)}
+.topbar{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:22px 0;border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:12px}.brand-icon{width:43px;height:43px;flex-shrink:0}.brand-icon svg{display:block;width:100%;height:100%}
+.brand-name{font-size:22px;font-weight:850;letter-spacing:-1px;text-transform:uppercase}.brand-name span{color:var(--orange)}.brand-note{font-size:9px;color:var(--muted);letter-spacing:2.1px;margin-top:2px}
+.toolbar{display:flex;gap:8px}.ghost{padding:10px 13px;border-radius:6px;background:transparent;color:var(--ink);border:1px solid var(--line);display:inline-flex;align-items:center;justify-content:center;gap:7px;font-size:12px;transition:border-color .15s,background .15s}.ghost:hover{background:#252a2b;border-color:#69706b}.ghost svg{width:16px;height:16px}.fullscreen-btn{background:var(--orange);border-color:var(--orange);color:#141515;font-weight:750}.fullscreen-btn:hover{background:#ff8a5f;border-color:#ff8a5f}
+.intro{position:relative;display:grid;grid-template-columns:minmax(0,1fr) minmax(260px,28%);gap:20px;align-items:center;isolation:isolate;padding:28px 0 24px;min-height:245px;overflow:hidden}
+.intro:after{content:"";position:absolute;z-index:-1;inset:0 0 0 40%;background:repeating-linear-gradient(130deg,transparent 0 75px,#2c353338 76px 77px);mask-image:linear-gradient(90deg,transparent,#000)}
+.eyebrow{text-transform:uppercase;font-size:10px;letter-spacing:2px;font-weight:750;color:var(--muted);margin-bottom:10px}.hero-copy .eyebrow{color:var(--orange);letter-spacing:2.5px;font-size:10px;display:flex;align-items:center;gap:8px}.hero-copy .eyebrow:before{content:"";width:18px;height:2px;background:var(--orange)}
+h1{font-family:Impact,"Arial Narrow",sans-serif;font-size:clamp(52px,5.7vw,95px);letter-spacing:1px;line-height:.98;margin:0;font-weight:900;text-transform:uppercase}h1 span{color:var(--orange)}
+.intro p{margin:16px 0 0;color:var(--muted);font-size:13px;letter-spacing:.2px}.hero-art{position:relative;justify-self:end;width:100%;max-width:390px;height:200px;display:flex;align-items:center;justify-content:center}.hero-art svg{height:200px;width:100%}.hero-art-caption{position:absolute;bottom:1px;right:16px;font-size:8px;letter-spacing:2px;color:#919b95}.hero-stamp{position:absolute;left:0;top:0;border:1px solid #ff713c66;border-radius:50%;height:72px;width:72px;display:flex;flex-direction:column;align-items:center;justify-content:center;transform:rotate(-12deg);font-size:8px;letter-spacing:1px;color:var(--orange)}.hero-stamp b{font-size:20px;line-height:1.1;letter-spacing:-1px}
+.motivation-banner{display:flex;align-items:center;justify-content:space-between;gap:24px;background:#1b201e;border:1px solid #36402d;border-left:3px solid var(--orange);padding:14px 18px;border-radius:6px;margin-bottom:22px}.motivation-message{display:flex;align-items:center;gap:11px;font-size:13px;color:#e1e9d7;font-weight:500;min-width:0}.motivation-symbol{color:var(--orange);font-size:19px;flex-shrink:0}.save-status{font-size:11px;display:flex;align-items:center;gap:7px;color:var(--muted);white-space:nowrap}.save-status:before{content:"";width:6px;height:6px;background:#b8df6c;border-radius:50%;flex-shrink:0}.save-status.error{color:#ffb29a;white-space:normal}.save-status.error:before{background:#ff8d69}
+.alert{padding:13px 17px;border:1px solid #9b553f;background:#301f19;color:#ffd1c0;border-radius:7px;margin-bottom:18px}
+.weekbox{background:var(--paper);padding:20px 23px;border:1px solid var(--line);border-radius:var(--radius)}.week-heading{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:16px}.week-heading-left{display:flex;align-items:center;gap:10px}.week-heading h2{font-size:15px;letter-spacing:.2px;margin:0}.week-controls{display:flex;align-items:center;gap:8px}.icon-btn{width:29px;height:29px;border-radius:4px;display:grid;place-items:center;background:#252a2b;color:var(--ink);font-size:18px}.icon-btn:hover{background:#38403c}.date-label{display:flex;align-items:center;gap:6px;font-size:12px;color:var(--muted)}.date-label input{background:#111415;color:var(--ink);border:1px solid var(--line);border-radius:4px;font-size:12px;padding:6px;min-width:125px}.today-btn{padding:7px 11px;border-radius:4px;background:#252a2b;color:var(--ink);font-size:12px}
+.day-short{display:none}.days{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:9px}.day{padding:12px 13px;text-align:left;border:1px solid var(--line);border-radius:7px;background:#1b2021;color:var(--ink);position:relative;min-height:96px;transition:background .15s,border-color .15s}.day:hover{background:#29302d;border-color:#6b7367}.day.selected{background:var(--orange);color:#171818;border-color:var(--orange)}.day.rest:not(.selected){background:#131617}.day-top{display:flex;justify-content:space-between;align-items:center;color:var(--muted);font-size:10px;letter-spacing:1px}.day.selected .day-top{color:#3e2d22}.day-number{font-family:Impact,"Arial Narrow",sans-serif;font-size:29px;font-weight:700;letter-spacing:.3px;margin-top:2px}.day-name{font-size:10px;margin-top:7px;display:flex;align-items:center;gap:5px}.day-name:before{content:"";width:4px;height:4px;background:var(--orange);border-radius:50%;flex-shrink:0}.day.rest .day-name:before{background:#87948b}.day.selected .day-name:before{background:#181a18}.today-mark{width:5px;height:5px;border-radius:50%;background:#b8df6c}.day.selected .today-mark{background:#161816}.day-done{font-size:13px;color:#b8df6c}.day.selected .day-done{color:#111}.week-legend{display:flex;flex-wrap:wrap;gap:16px;margin-top:13px;font-size:10px;color:var(--muted)}.week-legend b{font-weight:650;color:#e4e9e0}
+.stats{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:14px 0 26px}.stat{padding:16px 22px;background:#141819;border:1px solid var(--line);border-radius:7px;display:flex;align-items:center;gap:17px}.stat-num{font-family:Impact,"Arial Narrow",sans-serif;font-size:34px;font-weight:700;letter-spacing:.4px;white-space:nowrap;color:var(--orange)}.stat-num small{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:17px;color:#68716c;margin-left:6px;font-weight:500}.stat-label{font-size:11px;line-height:1.5;color:var(--muted)}.stat-label strong{color:#eef2e9;letter-spacing:.4px;font-size:11px;font-weight:650;display:block;text-transform:uppercase}
+.tabs{display:flex;gap:28px;border-bottom:1px solid var(--line);margin-bottom:24px}.tab{background:none;padding:0 0 14px;color:var(--muted);font-size:12px;text-transform:uppercase;letter-spacing:1.1px;position:relative}.tab.active{color:var(--ink);font-weight:750}.tab.active:after{content:"";position:absolute;bottom:-1px;left:0;right:0;height:3px;background:var(--orange)}.tab-count{font-size:10px;background:#2a302b;border-radius:3px;padding:2px 5px;margin-left:5px;font-weight:600;letter-spacing:0}
+.panel-heading{display:flex;justify-content:space-between;gap:16px;align-items:flex-start;margin-bottom:19px}.panel-heading h2{font-family:Impact,"Arial Narrow",sans-serif;font-size:36px;font-weight:700;text-transform:uppercase;letter-spacing:.6px;margin:3px 0 6px;line-height:1.15}.panel-heading p{font-size:12px;margin:0;color:var(--muted)}.date-text{font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:var(--orange);font-weight:650}.type-switch{display:flex;background:#171c1e;border:1px solid var(--line);padding:4px;border-radius:6px;flex-shrink:0}.type-btn{padding:8px 14px;background:transparent;border-radius:3px;color:var(--muted);font-size:11px}.type-btn.active{background:var(--orange);color:#171818;font-weight:750}
+.workout-layout{display:grid;grid-template-columns:minmax(0,1fr) clamp(265px,22vw,360px);gap:23px;align-items:start}.exercise-list{display:flex;flex-direction:column;gap:13px;min-width:0}.exercise{padding:22px 23px;background:var(--paper);border:1px solid var(--line);border-radius:10px;min-width:0;transition:border-color .2s}.exercise:focus-within{border-color:#b4714f}.exercise-heading{display:flex;align-items:flex-start;gap:13px;margin-bottom:19px}.exercise-num{font-size:12px;font-weight:750;letter-spacing:.7px;color:var(--orange);min-width:31px;border:1px solid #65402e;border-radius:4px;padding:6px 4px;text-align:center;line-height:1}.exercise-title{flex:1;min-width:0}.exercise-title h3{font-size:16px;margin:0 0 5px;letter-spacing:-.2px;font-weight:700}.exercise-title p{font-size:11px;margin:0;color:var(--muted)}.set-count{display:flex;gap:4px;align-items:center;font-size:11px;color:var(--muted);white-space:nowrap}.set-count select{border:1px solid #495248;border-radius:4px;color:var(--ink);background:#202623;padding:4px;font-size:12px}
+.set-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:10px}.set-grid.lunges-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.set{padding:12px;background:#101415;border-radius:6px;border:1px solid #272d2a;min-width:0}.set.filled{background:#232e23;border-color:#49603b}.set-title{font-size:10px;color:var(--muted);display:flex;justify-content:space-between;align-items:center;margin-bottom:9px}.set-check{color:#b8df6c;font-weight:750}.fields{display:flex;gap:7px}.field{flex:1;min-width:0;display:flex;flex-direction:column;gap:5px;font-size:10px;color:var(--muted)}.field input{border:1px solid #3b443d;border-radius:4px;background:#1a201d;width:100%;height:44px;min-width:0;padding:6px;text-align:center;color:#f6f7f0;font-size:21px;font-weight:650;font-variant-numeric:tabular-nums;appearance:textfield;-moz-appearance:textfield}.field input::-webkit-inner-spin-button,.field input::-webkit-outer-spin-button{-webkit-appearance:none;margin:0}.field input::placeholder{color:#657064;font-weight:400}.field input:invalid{border-color:#ff9572;background:#40261e}.weight-field{margin-top:9px;flex-direction:row;align-items:center;justify-content:space-between}.weight-field input{height:28px;width:57%;font-size:13px;font-weight:500;background:#151a17}.exercise-footer{display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap;margin-top:15px;color:var(--muted);font-size:10px}.record-chip{color:#c1dc9b}.record-chip.new-record{color:var(--orange)}
+.sidebar{position:sticky;top:20px;min-width:0}.progress-card{background:linear-gradient(145deg,#292e24,#191e1a);color:var(--ink);border:1px solid #596342;border-radius:10px;padding:25px}.progress-card .eyebrow{color:#c3d399;letter-spacing:1.8px}.progress-value{font-family:Impact,"Arial Narrow",sans-serif;font-size:60px;letter-spacing:1px;line-height:1.1;font-weight:700}.progress-value span{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:22px;color:#939d87;letter-spacing:-.5px;font-weight:400}.progress-track{height:6px;border-radius:1px;background:#414a39;margin:18px 0 12px;overflow:hidden}.progress-fill{background:var(--orange);height:100%;transition:width .2s}.progress-copy{font-size:12px;color:#c7cfbf;margin:0;line-height:1.5}.primary{display:flex;align-items:center;justify-content:center;gap:8px;border-radius:5px;background:var(--orange);color:#191b18;padding:14px 15px;font-size:12px;font-weight:800;width:100%;margin-top:20px;text-transform:uppercase;letter-spacing:.4px}.primary:hover:not(:disabled){background:#ff956d}.primary:disabled{background:#353e30;color:#929e87}.primary.completed{background:#b8df6c;color:#151815}.progress-card small{display:block;color:#aab79b;font-size:10px;margin-top:12px;line-height:1.5}
+.coach-card{position:relative;border:1px solid var(--line);border-radius:10px;padding:22px;background:#171a1b;margin-top:15px;overflow:hidden}.coach-card:after{content:"+1";position:absolute;right:9px;bottom:-10px;font-family:Impact,sans-serif;font-size:85px;color:#ff713c09;pointer-events:none}.coach-card .eyebrow{color:var(--orange);font-size:9px;letter-spacing:2px}.coach-card h3{font-size:20px;letter-spacing:-.6px;line-height:1.2;margin:0 0 10px;font-weight:750}.coach-card p{font-size:12px;color:var(--muted);line-height:1.7;margin:0}.note-card{padding:22px 4px 19px}.note-card h3{font-size:12px;margin:0 0 8px;color:#e0e7d9}.note-card p{font-size:11px;line-height:1.7;color:var(--muted);margin:0}.note-card+.note-card{border-top:1px solid var(--line)}
+.rest-card{background:linear-gradient(130deg,#1e241f,#141819);border:1px solid var(--line);border-radius:10px;padding:34px;display:flex;gap:28px;align-items:center;margin-bottom:20px}.rest-art{width:98px;height:98px;min-width:98px;display:grid;place-items:center;background:#242e21;border:1px solid #495c35;border-radius:50%;position:relative;color:#b8df6c}.rest-art svg{width:47px;height:47px}.rest-card h3{font-size:25px;letter-spacing:-.7px;margin:0 0 10px}.rest-card p{font-size:13px;color:var(--muted);max-width:650px;margin:0;line-height:1.7}.rest-card .ghost{margin-top:20px;background:var(--orange);color:#171818;border:0;padding:12px 16px;font-weight:700}.extra-workout{display:flex;align-items:center;gap:12px;color:var(--muted);font-size:12px;flex-wrap:wrap}.extra-workout .ghost{font-size:12px}
+.records-note{color:var(--muted);font-size:12px;max-width:1000px;margin-bottom:20px}.record-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(265px,1fr));gap:14px}.record-card{border-radius:9px;background:var(--paper);border:1px solid var(--line);padding:24px;min-height:190px;position:relative}.record-card:before{content:"";position:absolute;left:24px;top:0;width:32px;height:2px;background:var(--orange)}.record-card .eyebrow{letter-spacing:1px;font-size:9px;margin-bottom:11px}.record-card h3{font-size:14px;letter-spacing:-.2px;min-height:38px;margin:0 0 13px}.record-number{font-family:Impact,"Arial Narrow",sans-serif;font-size:49px;line-height:1.05;letter-spacing:.6px;font-weight:700;color:var(--orange)}.record-number small{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;font-size:11px;letter-spacing:0;font-weight:400;color:var(--muted);margin-left:7px}.record-date{font-size:10px;color:var(--muted);margin:8px 0 15px}.record-weight{font-size:11px;border-top:1px solid var(--line);padding-top:12px;color:var(--muted)}.record-weight b{color:var(--ink)}.record-empty{font-size:12px;color:#939d86;margin-top:8px}
+.history-list{display:flex;flex-direction:column;gap:10px}.history-row{border:1px solid var(--line);background:var(--paper);border-radius:7px;padding:18px 23px;display:flex;align-items:center;gap:20px}.history-date{width:160px;font-size:12px;color:var(--muted);flex-shrink:0}.history-main{flex:1;min-width:0}.history-main strong{display:block;font-size:15px}.history-main small{font-size:11px;color:var(--muted)}.pill{font-size:10px;padding:6px 9px;border-radius:4px;background:#2a302b;color:var(--muted);white-space:nowrap}.pill.done{background:#2b3825;color:#c5e896}.history-open{background:transparent;color:var(--ink);border:1px solid var(--line);font-size:11px;border-radius:4px;padding:9px 13px}.history-open:hover{border-color:var(--orange)}.empty-state{padding:47px 24px;text-align:center;border:1px dashed #46563d;border-radius:9px;background:#161d17}.empty-state h3{font-size:20px;margin:0 0 10px;letter-spacing:-.4px}.empty-state p{font-size:13px;color:var(--muted);margin:0}
+.footer{margin:35px 0 23px;padding-top:19px;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:15px;align-items:flex-start;color:var(--muted);font-size:10px}.footer a{text-decoration:none;white-space:nowrap;color:#d6decc}.footer a:hover{color:var(--orange)}.toast{position:fixed;left:50%;bottom:24px;transform:translateX(-50%);padding:14px 20px;background:#ff713c;color:#151817;border-radius:6px;border:1px solid #ff9368;font-weight:650;box-shadow:0 5px 25px #0006;font-size:13px;z-index:5;width:max-content;max-width:calc(100% - 32px)}
+[hidden]{display:none!important}.sr-only{position:absolute;clip:rect(0,0,0,0);width:1px;height:1px;overflow:hidden}:fullscreen{background:var(--bg);overflow:auto}:-webkit-full-screen{background:var(--bg);overflow:auto}
+@media(min-width:1550px){.exercise-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));align-items:start}.exercise:last-child{grid-column:1/-1}.exercise-title h3{font-size:15px}.hero-art{max-width:410px}.intro{grid-template-columns:minmax(0,1fr) 35%}}
+@media(max-width:1100px){.workout-layout{grid-template-columns:minmax(0,1fr) 260px;gap:17px}.exercise{padding:19px}.set-grid{gap:8px}.set{padding:10px}.progress-card{padding:20px}.record-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.intro{grid-template-columns:minmax(0,1fr) 250px}.hero-stamp{width:55px;height:55px;font-size:6px}.hero-stamp b{font-size:16px}.save-status{font-size:10px}.motivation-message{font-size:12px}}
+@media(max-width:800px){.shell{padding:0 19px}.topbar{padding:17px 0}.brand-name{font-size:19px}.brand-note{font-size:8px;letter-spacing:1.6px}.brand-icon{width:37px;height:37px}.toolbar .button-text{display:none}.toolbar .ghost{padding:9px}.intro{grid-template-columns:minmax(0,1fr);min-height:auto;padding:27px 0 24px}.hero-art{display:none}h1{font-size:clamp(49px,9vw,69px);letter-spacing:.5px}.intro p{font-size:12px;margin-top:13px}.hero-copy .eyebrow{font-size:9px;letter-spacing:1.8px}.motivation-banner{display:block;padding:12px 14px;margin-bottom:18px}.motivation-message{font-size:12px;line-height:1.6}.save-status{margin-top:9px;font-size:10px;white-space:normal;padding-left:27px}.weekbox{padding:16px 13px}.week-heading{align-items:flex-start;gap:8px}.week-heading-left{gap:5px;flex-wrap:wrap}.week-heading h2{font-size:12px;width:100%;margin-top:3px}.week-controls{gap:5px;flex-wrap:wrap;justify-content:flex-end}.date-label span{display:none}.date-label input{min-width:115px;padding:4px;font-size:11px}.today-btn{font-size:11px;padding:5px 7px}.days{gap:5px}.day{padding:10px 5px;min-height:85px;border-radius:5px}.day-top{font-size:9px;letter-spacing:0}.day-number{font-size:24px}.day-name{font-size:8px;gap:3px;white-space:nowrap}.day-long{display:none}.day-short{display:inline}.day-name:before{width:3px;height:3px}.week-legend{font-size:9px;gap:9px;flex-wrap:wrap}.stats{gap:7px;margin:12px 0 24px}.stat{padding:13px 10px;display:block}.stat-num{font-size:29px;margin-bottom:3px}.stat-num small{font-size:12px;margin-left:3px}.stat-label{font-size:9px}.stat-label strong{font-size:9px;letter-spacing:0}.tabs{gap:22px;margin-bottom:23px}.tab{font-size:11px;letter-spacing:.8px}.tab-count{margin-left:2px}.panel-heading{flex-wrap:wrap;margin-bottom:16px;gap:13px}.panel-heading h2{font-size:31px}.panel-heading p{font-size:11px}.date-text{font-size:9px;letter-spacing:1.1px}.type-btn{font-size:11px;padding:7px 13px}.workout-layout{display:flex;flex-direction:column}.exercise-list{width:100%;gap:12px}.sidebar{position:static;width:100%;display:grid;grid-template-columns:1fr;gap:0}.progress-card{margin-top:3px;padding:22px}.progress-value{font-size:48px}.progress-card .primary{font-size:12px;padding:14px}.note-card{padding:18px 2px}.coach-card{padding:20px}.exercise{padding:17px 13px;border-radius:8px}.exercise-num{min-width:25px;font-size:11px;padding:5px 3px}.exercise-title h3{font-size:14px}.exercise-title p{font-size:10px}.exercise-heading{gap:9px;margin-bottom:15px}.set-grid,.set-grid.lunges-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}.set{padding:11px}.set-title{font-size:10px}.field{font-size:10px}.field input{height:42px;font-size:20px}.weight-field input{height:29px;font-size:13px}.set-count{font-size:10px}.exercise-footer{font-size:10px}.rest-card{padding:24px 19px;gap:17px;align-items:flex-start}.rest-art{width:51px;height:51px;min-width:51px}.rest-art svg{width:27px;height:27px}.rest-card h3{font-size:20px}.rest-card p{font-size:12px}.rest-card .ghost{font-size:11px}.record-grid{gap:10px;grid-template-columns:repeat(2,minmax(0,1fr))}.record-card{padding:16px;min-height:186px}.record-card:before{left:16px}.record-card h3{font-size:12px;min-height:34px}.record-number{font-size:38px}.record-number small{display:block;font-size:10px;margin:5px 0 0}.record-weight{font-size:10px}.history-row{padding:14px;gap:10px;flex-wrap:wrap}.history-date{width:100%;font-size:11px}.history-main strong{font-size:13px}.history-main small{font-size:10px}.pill{font-size:9px}.history-open{font-size:10px;padding:8px 9px}.footer{display:block;margin-top:28px;font-size:10px;line-height:1.7}.footer a{display:inline-block;margin-top:10px}.toast{font-size:12px}.extra-workout{font-size:11px}.extra-workout .ghost{padding:9px 12px}}
+@media(max-width:370px){.shell{padding:0 13px}.brand-name{font-size:17px}.brand-note{font-size:7px}.brand{gap:8px}.toolbar{gap:5px}.toolbar .ghost{padding:8px}.tabs{gap:16px}.tab{font-size:10px}.rest-card{display:block}.rest-art{margin-bottom:16px}.stat{padding:11px 8px}}
+@media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+@media print{body{background:#fff;color:#111}.shell{padding:0}.toolbar,.hero-art,.motivation-banner,.week-controls,.tabs,.type-switch,.sidebar,.toast,.footer,.set-count{display:none!important}.intro{padding:15px 0}h1{font-size:38px;color:#111}h1 span{color:#333}.workout-layout{display:block}.exercise{break-inside:avoid;margin-bottom:10px;background:#fff;color:#111}.exercise-list{display:block}.set-grid{grid-template-columns:repeat(4,1fr)}.set,.field input,.stat,.weekbox,.day{background:#fff;color:#111}.exercise-title p,.field,.exercise-footer,.set-title{color:#444}}
+  </style>
+  <style id="game-style">
+.game-strip{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(0,1fr) 180px;gap:14px;margin:-10px 0 26px;padding:19px 22px;background:linear-gradient(120deg,#242b21,#171b1b 65%);border:1px solid #444d36;border-radius:9px}
+.player-card{display:flex;align-items:center;gap:16px;min-width:0}.level-emblem{width:57px;height:65px;flex-shrink:0;clip-path:polygon(50% 0,100% 24%,100% 76%,50% 100%,0 76%,0 24%);display:flex;flex-direction:column;align-items:center;justify-content:center;background:#b8df6c;color:#131811}.level-emblem b{font-family:Impact,"Arial Narrow",sans-serif;font-size:29px;line-height:1}.level-emblem span{font-size:7px;letter-spacing:1px;font-weight:800}.player-info{flex:1;min-width:0}.game-eyebrow{font-size:9px;text-transform:uppercase;letter-spacing:1.5px;color:#b7c49d;margin-bottom:5px}.player-name{font-weight:750;font-size:15px;line-height:1.2}.player-xp{font-size:10px;color:var(--muted);margin-top:4px}.xp-track,.badge-track{height:4px;background:#394133;border-radius:2px;overflow:hidden;margin:9px 0 5px}.xp-fill,.badge-fill{height:100%;background:#b8df6c;transition:width .4s}.xp-next{font-size:9px;color:var(--muted)}
+.week-quest{padding-left:20px;border-left:1px solid #394133;min-width:0}.quest-title{display:flex;justify-content:space-between;gap:10px;align-items:center}.quest-title strong{font-size:12px}.quest-prize{font-size:10px;color:#b8df6c;white-space:nowrap;font-weight:750}.quest-days{display:flex;gap:6px;margin:10px 0 6px}.quest-day{min-width:35px;border:1px solid #41473d;border-radius:4px;padding:4px 7px;font-size:9px;color:var(--muted);text-align:center}.quest-day.done{background:#b8df6c;color:#11180e;border-color:#b8df6c;font-weight:750}.quest-copy{font-size:9px;color:var(--muted);line-height:1.5}
+.streak-card{border-left:1px solid #394133;padding-left:20px;display:flex;align-items:center;gap:10px;min-width:0}.game-icon{width:24px;height:24px;display:block}.streak-icon{color:var(--orange)}.streak-number{font-family:Impact,"Arial Narrow",sans-serif;font-size:32px;line-height:1.1;color:var(--orange)}.streak-copy{font-size:10px;color:var(--muted);line-height:1.5}.streak-help{font-size:8px;color:#909b8c;margin-top:4px}
+.reward-hint{display:flex;align-items:center;justify-content:center;gap:6px;color:#c4e892;font-size:10px;border:1px dashed #657648;border-radius:4px;padding:8px;margin:14px 0 0}.reward-hint .game-icon{width:14px;height:14px}.game-rules{font-size:12px;color:var(--muted);max-width:800px;line-height:1.7}.game-rules b{color:#c4e892;font-weight:700}
+.next-goal{display:flex;align-items:center;gap:18px;padding:21px 23px;border:1px solid #5d6845;border-radius:10px;background:linear-gradient(110deg,#293221,#171c19);margin-bottom:19px}.next-goal .badge-emblem{flex-shrink:0}.next-goal h3{margin:2px 0 5px;font-size:18px}.next-goal p{font-size:12px;color:var(--muted);margin:0}.next-goal .game-eyebrow{color:#c4e892}.goal-progress{margin-left:auto;min-width:110px;font-size:11px;color:#d6e8ba;text-align:right}
+.badge-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:15px}.badge-card{padding:23px;border:1px solid var(--line);border-radius:10px;background:var(--paper);position:relative;min-width:0}.badge-card.unlocked{border-color:#56673b;background:linear-gradient(140deg,#232b1d,#171a1b)}.badge-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:17px}.badge-emblem{width:49px;height:49px;display:grid;place-items:center;border:1px solid #53594c;border-radius:12px;color:#9aa68c;background:#242b22}.badge-emblem .game-icon{width:27px;height:27px}.unlocked .badge-emblem,.next-goal .badge-emblem{color:#b8df6c;border-color:#849c59;background:#293421}.badge-status{font-size:9px;color:var(--muted);letter-spacing:.4px;text-transform:uppercase}.unlocked .badge-status{color:#b8df6c}.badge-card h3{font-size:16px;margin:0 0 8px}.badge-card p{font-size:12px;color:var(--muted);margin:0;min-height:35px;line-height:1.6}.badge-progress{font-size:10px;color:var(--muted);margin-top:17px}.badge-track{margin-top:7px}.badge-card:not(.unlocked) .badge-fill{background:#7e8c63}
+.reward-dialog{padding:0;color:var(--ink);background:#171c18;border:1px solid #617741;border-radius:15px;width:min(520px,calc(100% - 32px));max-height:calc(100dvh - 32px);overflow:auto;box-shadow:0 28px 100px #000a}.reward-dialog::backdrop{background:#050908ce;backdrop-filter:blur(8px)}.reward-content{position:relative;text-align:center;padding:37px 35px 29px;overflow:hidden}.reward-close{position:absolute;top:13px;right:13px;width:29px;height:29px;background:#2a3327;color:#d6e8bb;border-radius:5px;font-size:20px;z-index:2}.reward-symbol{width:80px;height:80px;display:grid;place-items:center;border:1px solid #8bab54;border-radius:50%;background:radial-gradient(circle,#405529,#26301f);color:#c4ed82;margin:0 auto 18px;box-shadow:0 0 45px #b8df6c25}.reward-symbol .game-icon{width:40px;height:40px}.reward-dialog[open] .reward-symbol{animation:reward-pop .45s ease-out}.reward-kicker{font-size:10px;letter-spacing:2px;color:#b8df6c;text-transform:uppercase;margin-bottom:7px}.reward-dialog h2{font-family:Impact,"Arial Narrow",sans-serif;font-size:37px;line-height:1.08;margin:0 0 14px;text-transform:uppercase;letter-spacing:.6px}.reward-xp{font-family:Impact,"Arial Narrow",sans-serif;font-size:57px;color:#b8df6c;line-height:1.1}.reward-xp small{font-family:inherit;font-size:24px}.reward-breakdown{font-size:11px;line-height:1.7;color:var(--muted);margin-top:8px}.reward-rank{font-size:13px;margin-top:16px;color:#ebf3df}.reward-meter{max-width:315px;margin:11px auto 0}.reward-meter .xp-next{font-size:10px}.reward-badges{display:flex;flex-direction:column;gap:8px;margin-top:20px}.reward-badge{display:flex;align-items:center;text-align:left;gap:12px;background:#252e20;border:1px solid #58673f;border-radius:7px;padding:11px 14px}.reward-badge .game-icon{color:#b8df6c;width:24px;height:24px;flex-shrink:0}.reward-badge strong{font-size:12px;display:block}.reward-badge span{font-size:9px;color:#adbb9a}.reward-dialog .primary{margin-top:23px;background:#b8df6c;color:#151b10;font-size:12px}.reward-dialog .primary:hover{background:#c6ee81}.reward-save-warning{margin-top:12px;color:#ffb79b;font-size:11px;line-height:1.5}.reward-particles{position:absolute;inset:0;pointer-events:none;overflow:hidden}.reward-particle{position:absolute;top:-12px;width:5px;height:9px;background:#b8df6c;opacity:0}.reward-dialog[open] .reward-particle{animation:reward-confetti 1.6s ease-out both;animation-delay:var(--delay);left:var(--x)}.reward-particle:nth-child(even){background:#ff713c}
+@keyframes reward-pop{from{transform:scale(.7);opacity:0}to{transform:scale(1);opacity:1}}@keyframes reward-confetti{0%{transform:translateY(0) rotate(0);opacity:0}15%{opacity:1}100%{transform:translateY(350px) rotate(280deg);opacity:0}}
+@media(max-width:1100px){.game-strip{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr) 145px;padding:17px;gap:10px}.week-quest,.streak-card{padding-left:14px}.player-card{gap:11px}.player-name{font-size:14px}.level-emblem{width:47px;height:55px}.quest-days{gap:4px}.quest-day{min-width:29px;padding:4px}.badge-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:800px){.game-strip{grid-template-columns:minmax(0,1fr) 111px;gap:15px;padding:16px;margin:-10px 0 24px}.player-card{grid-column:1/-1}.player-name{font-size:14px}.level-emblem{width:43px;height:49px}.level-emblem b{font-size:24px}.xp-track{margin-top:7px}.week-quest{border:0;padding:0}.streak-card{padding-left:12px;gap:6px}.streak-icon .game-icon{width:20px;height:20px}.streak-number{font-size:29px}.streak-copy{font-size:9px}.streak-help{font-size:8px}.quest-title strong{font-size:11px}.quest-prize{font-size:9px}.quest-day{font-size:8px}.tabs{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:4px}.tab{font-size:10px;letter-spacing:0;padding-bottom:12px;text-align:left}.tab-count{margin-left:2px;font-size:9px;padding:1px 3px}.next-goal{padding:18px;gap:13px;flex-wrap:wrap}.next-goal h3{font-size:16px}.next-goal p{font-size:11px}.next-goal .goal-copy{flex:1;min-width:0}.goal-progress{width:100%;margin:0;text-align:left}.badge-card{padding:19px}.badge-card h3{font-size:14px}.game-rules{font-size:11px}.reward-content{padding:30px 22px 23px}.reward-dialog h2{font-size:32px}.reward-xp{font-size:49px}.reward-symbol{width:67px;height:67px}.reward-symbol .game-icon{width:33px;height:33px}}
+@media(max-width:500px){.badge-grid{grid-template-columns:1fr}.badge-card p{min-height:0}.badge-top{margin-bottom:13px}.badge-card{padding:18px}.badge-emblem{width:42px;height:42px}.badge-emblem .game-icon{width:23px;height:23px}}
+@media(max-width:370px){.game-strip{padding:13px;grid-template-columns:minmax(0,1fr) 100px;gap:12px}.quest-title{display:block}.quest-prize{display:block;margin-top:3px}.quest-days{gap:4px}.quest-day{min-width:25px;padding:4px 3px}.tab{font-size:9px}.tab-count{padding:1px 2px;font-size:8px}.reward-dialog h2{font-size:29px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.xp-fill,.badge-fill{transition:none}.reward-dialog[open] .reward-symbol,.reward-dialog[open] .reward-particle{animation:none}}
+@media print{.game-strip,.reward-hint,.reward-dialog{display:none!important}}
+  </style>
+  <style id="habits-style">
+.habits-panel{margin:0 0 25px}.habits-heading{display:flex;align-items:center;justify-content:space-between;gap:12px;margin:0 0 12px}.habits-heading h2{font-size:15px;margin:0;font-weight:750}.habits-heading span{font-size:10px;color:var(--muted)}.habits-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}.habit-card{padding:20px 22px;background:var(--paper);border:1px solid var(--line);border-radius:9px;min-width:0}.habit-card.done{border-color:#687e42;background:linear-gradient(120deg,#252e20,#171b19)}.habit-top{display:flex;gap:12px;align-items:center}.habit-icon{width:38px;height:38px;display:grid;place-items:center;background:#2e281f;border:1px solid #735438;color:var(--orange);border-radius:9px;flex-shrink:0}.habit-top h3{font-size:14px;margin:0 0 3px}.habit-time{font-size:9px;color:var(--muted);letter-spacing:.4px}.habit-card p{font-size:11px;color:var(--muted);line-height:1.65;margin:12px 0}.habit-action{display:flex;align-items:center;gap:9px;padding:11px 13px;background:#222a22;border:1px solid #53603f;border-radius:5px;font-size:12px;cursor:pointer;line-height:1.5}.habit-action input{width:18px;height:18px;margin:0;accent-color:#b8df6c;flex-shrink:0;cursor:pointer}.habit-action strong{font-size:12px}.habit-action.unavailable{background:#171a1b;border-color:var(--line);color:#8e9990;cursor:default}.habit-action.unavailable input{cursor:default}.habit-meta{font-size:9px;color:#c0d59d;margin-top:9px}.habit-card.done .habit-icon{color:#b8df6c;background:#2a3421;border-color:#75894e}.routine-editor{margin-top:12px}.routine-editor summary{font-size:10px;color:#c2cab7;cursor:pointer;width:max-content;max-width:100%}.routine-editor label{display:block;font-size:10px;color:var(--muted);margin:13px 0 7px}.routine-editor textarea{display:block;width:100%;min-height:92px;resize:vertical;font:inherit;font-size:12px;line-height:1.7;padding:11px;background:#101514;color:var(--ink);border:1px solid #46513f;border-radius:5px}.routine-editor .ghost{margin-top:9px;font-size:10px}.routine-list{padding:0;margin:12px 0;list-style:none;display:flex;flex-direction:column;gap:6px;counter-reset:routine}.routine-list li{display:flex;align-items:flex-start;gap:8px;font-size:11px;color:#c0c9b7;overflow-wrap:anywhere}.routine-list li:before{counter-increment:routine;content:counter(routine);font-size:9px;width:17px;height:17px;line-height:17px;border:1px solid #566349;border-radius:3px;text-align:center;color:#b1bd9b;flex-shrink:0}.habit-card.done .routine-list li:before{content:'✓';color:#b8df6c;border-color:#71874c}
+.post-workout-reminder{margin-top:18px;padding:14px;background:#26281f;border:1px solid #686340;border-radius:8px;text-align:left}.post-reminder-title{display:flex;gap:8px;align-items:center;font-size:12px;font-weight:700;color:#f2d6a2}.post-reminder-title .game-icon{width:18px;height:18px}.post-workout-reminder p{font-size:10px;color:var(--muted);line-height:1.6;margin:7px 0 11px}.post-workout-reminder .habit-action{font-size:11px;padding:9px 10px}.post-workout-reminder .habit-action strong{font-size:11px}.day-habit-mark{display:inline-block;margin-left:4px;color:#b8df6c;font-size:9px}.day.selected .day-habit-mark{color:#263317}
+@media(max-width:800px){.habits-grid{grid-template-columns:1fr;gap:10px}.habit-card{padding:17px}.habits-heading h2{font-size:13px}.habits-heading span{font-size:9px}.habit-top h3{font-size:13px}.habit-action,.habit-action strong{font-size:11px}.post-workout-reminder{padding:11px}.habits-panel{margin-bottom:24px}}
+@media print{.habits-panel,.post-workout-reminder{display:none!important}}
+  </style>
+  <style id="coach-style">
+.tabs{flex-wrap:wrap;overflow:visible;gap:25px}.tab{flex-shrink:0}.tabs::-webkit-scrollbar{height:3px}.tabs::-webkit-scrollbar-thumb{background:#414d3b}
+.coach-mode{display:flex;align-items:center;justify-content:space-between;gap:16px;margin:0 0 19px;flex-wrap:wrap}.mode-buttons{display:flex;gap:4px;padding:4px;border:1px solid var(--line);border-radius:7px;background:#171c1e}.mode-buttons button{background:transparent;color:var(--muted);font-size:11px;padding:9px 14px;border-radius:4px}.mode-buttons button.active{background:var(--orange);color:#151916;font-weight:750}.rest-setting{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:11px}.rest-setting input{width:64px;background:#1c2320;color:var(--ink);border:1px solid #465141;border-radius:5px;padding:7px;font-size:13px}
+.focus-card{border:1px solid #63734c;border-radius:11px;padding:28px;background:linear-gradient(135deg,#262e22,#151a17);position:relative}.focus-card .eyebrow{color:#bddb92}.focus-top{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:17px}.focus-step-number{white-space:nowrap;font:45px Impact,"Arial Narrow",sans-serif;line-height:1;color:var(--orange)}.focus-step-number small{font:14px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:#9ea993}.focus-card h3{font-size:25px;line-height:1.2;margin:0 0 8px;letter-spacing:-.5px}.focus-card p{font-size:12px;color:var(--muted);margin:0 0 20px}.focus-card .fields{max-width:420px;gap:14px}.focus-card .field input{height:68px;font-size:32px}.focus-card .weight-field{max-width:190px;margin:15px 0 0}.focus-card .weight-field input{height:40px;font-size:18px}.focus-card .primary{max-width:460px;margin-top:21px}.focus-rest-copy{font-size:11px;color:#c0d29f;margin-top:13px}.focus-hint{border-top:1px solid #384633;padding-top:15px;margin-top:21px;color:#a2b092;font-size:11px}.focus-card.done{border-color:#8caf5b}.focus-card.done h3{color:#c3ed86}.list-rest-button{margin-top:12px;width:100%;font-size:11px}
+.rest-dock{position:fixed;z-index:20;bottom:16px;left:50%;transform:translateX(-50%);width:min(670px,calc(100% - 24px));border:1px solid #73884e;border-radius:12px;background:#202a1ef5;box-shadow:0 8px 40px #0009;padding:14px 19px;display:flex;align-items:center;gap:17px;backdrop-filter:blur(14px)}.rest-time{font:41px Impact,"Arial Narrow",sans-serif;color:#c4ed82;min-width:82px;line-height:1;font-variant-numeric:tabular-nums}.rest-info{flex:1;min-width:0}.rest-info strong{display:block;font-size:12px}.rest-info span{font-size:9px;color:#b4bfa7;display:block;margin-top:3px}.rest-actions{display:flex;gap:6px;flex-shrink:0}.rest-actions button{font-size:10px;padding:9px 10px}.rest-dock.ready{border-color:var(--orange)}.rest-dock.ready .rest-time{color:var(--orange)}body.has-rest-timer{padding-bottom:108px}
+.routine-steps{padding:0;margin:16px 0;list-style:none;display:flex;flex-direction:column;gap:7px}.routine-steps label{display:flex;align-items:center;gap:10px;background:#141b1555;border:1px solid #45503a;border-radius:5px;padding:10px 11px;font-size:11px;cursor:pointer}.routine-steps input{width:17px;height:17px;accent-color:#b8df6c;flex-shrink:0;margin:0}.routine-steps .step-done span{color:#b9c9a1;text-decoration:line-through;text-decoration-color:#70845a}.routine-progress{font-size:10px;color:#b9c9a1;margin-bottom:12px}.routine-snapshot{font-size:9px;color:#a6b48e;margin-top:10px}
+.wellness-card{border:1px solid #46513e;border-radius:9px;padding:20px;background:#1a2119;margin-top:15px;text-align:left}.wellness-card h3{margin:0 0 5px;font-size:15px;letter-spacing:-.2px}.wellness-card p{margin:0 0 13px;font-size:10px;color:#a8b89a}.wellness-options{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:6px;margin-bottom:14px}.wellness-option{position:relative;cursor:pointer}.wellness-option input{position:absolute;opacity:0;width:1px;height:1px}.wellness-option span{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;background:#131a13;border:1px solid #394630;border-radius:5px;padding:10px 4px;font-size:9px;min-height:59px;line-height:1.4}.wellness-option b{font-size:18px;margin-bottom:3px;font-weight:400}.wellness-option input:checked+span{border-color:#b8df6c;background:#334425;color:#dcf5bc}.wellness-option input:focus-visible+span{outline:2px solid var(--orange);outline-offset:2px}.wellness-note{display:block;font-size:10px;color:#b2c29e}.wellness-note textarea{display:block;resize:vertical;width:100%;padding:9px;border:1px solid #46533a;border-radius:5px;background:#131a13;color:var(--ink);font:12px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;margin:6px 0 10px;min-height:55px}.wellness-card .ghost{font-size:10px}.wellness-save-status{display:inline-block;margin-left:9px;color:#b8d490;font-size:9px}.reward-content .wellness-card{padding:15px;margin-top:15px}.reward-content .wellness-card h3{font-size:13px}.history-wellness{display:block;color:#b6c699;font-size:10px;margin-top:6px}
+.chart-card,.goal-editor,.personal-goal{border:1px solid var(--line);border-radius:10px;padding:25px;background:var(--paper)}.chart-controls{display:grid;grid-template-columns:minmax(160px,2fr) minmax(120px,1fr) minmax(115px,1fr);gap:12px;margin-bottom:24px}.coach-label{display:block;color:var(--muted);font-size:10px}.coach-label select,.coach-label input{width:100%;display:block;padding:11px 10px;margin-top:6px;background:#111718;border:1px solid #455047;border-radius:5px;color:var(--ink);font-size:12px;min-width:0}.chart-summary{display:flex;flex-wrap:wrap;gap:24px;margin:0 0 17px}.chart-summary span{font-size:10px;color:var(--muted)}.chart-summary b{display:block;font-size:23px;color:#c4e892;margin-bottom:2px}.chart-frame{margin:0}.chart-frame svg{display:block;width:100%;height:auto;max-height:380px;overflow:visible}.chart-caption{font-size:11px;color:var(--muted);margin-top:12px;line-height:1.6}.chart-empty{min-height:210px;display:grid;place-items:center;text-align:center;padding:35px;border:1px dashed #3c4938;border-radius:7px;color:var(--muted);font-size:13px}.chart-table{margin-top:20px;font-size:11px;color:var(--muted)}.chart-table summary{cursor:pointer;color:#c8d8b5}.chart-table-scroll{overflow:auto;max-height:350px;margin-top:12px}.chart-table table{width:100%;border-collapse:collapse}.chart-table th,.chart-table td{padding:9px;border-bottom:1px solid var(--line);text-align:left}.chart-table th{color:var(--ink)}
+.goals-layout{display:grid;grid-template-columns:minmax(280px,360px) minmax(0,1fr);gap:19px;align-items:start}.goal-editor h3{font-size:18px;margin:0 0 17px}.goal-editor .coach-label{margin-bottom:12px}.goal-editor .primary{margin-top:15px;font-size:11px}.goal-editor .ghost{font-size:10px;margin-top:10px}.goal-dates{display:grid;grid-template-columns:1fr 1fr;gap:10px}.goal-list{display:grid;grid-template-columns:repeat(auto-fit,minmax(265px,1fr));gap:13px}.personal-goal{padding:22px}.personal-goal h3{margin:0 0 7px;font-size:17px;line-height:1.3}.personal-goal p{font-size:10px;color:var(--muted);margin:0 0 16px}.personal-goal .goal-value{font:34px Impact,"Arial Narrow",sans-serif;color:var(--orange);letter-spacing:.4px}.goal-value small{font:14px -apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--muted)}.goal-state{font-size:10px;margin:10px 0 15px;color:#bbc8ab}.goal-buttons{display:flex;flex-wrap:wrap;gap:7px}.goal-buttons .ghost{font-size:10px;padding:8px 10px}.personal-goal.reached{border-color:#8b9d45;background:linear-gradient(140deg,#292e20,#191e18)}.personal-goal.reached .goal-value{color:#e2c774}.goal-title-row{display:flex;justify-content:space-between;align-items:start;gap:10px}.goal-title-row .medal{width:46px;height:57px;flex-shrink:0}.goal-empty{padding:35px 25px;text-align:center;border:1px dashed #46523d;border-radius:10px;color:var(--muted);font-size:12px}
+.backup-reminder{display:flex;align-items:center;gap:18px;border:1px solid #6c593b;background:#292319;border-radius:8px;padding:16px 20px;margin:0 0 18px}.backup-copy{flex:1;min-width:0}.backup-copy strong{font-size:12px;color:#ebd2a5;display:block;margin-bottom:4px}.backup-copy p{font-size:10px;color:#bcb09a;margin:0;line-height:1.5}.backup-actions{display:flex;gap:8px;flex-shrink:0}.backup-actions .ghost{font-size:10px;padding:9px 11px}.backup-actions .backup-download{background:#e9c581;color:#231b11;border-color:#e9c581;font-weight:700}
+.medal{width:80px;height:100px;display:block;flex-shrink:0;filter:drop-shadow(0 5px 5px #0004)}.medal>svg{width:100%;height:100%;display:block}.medal.locked{filter:grayscale(1);opacity:.3}.medal .medal-symbol{display:block}.medal-tier{font-size:9px;text-transform:uppercase;letter-spacing:1px;color:#b7c4a5;margin-top:8px}.medal-legend{display:flex;gap:17px;flex-wrap:wrap;margin:0 0 22px;font-size:10px;color:var(--muted)}.medal-legend span{display:flex;align-items:center;gap:6px}.medal-legend i{display:block;width:8px;height:8px;border-radius:50%}.badge-card .badge-top{align-items:center}.badge-card .medal{width:75px;height:94px}.badge-card.unlocked{background:linear-gradient(145deg,#252d1f,#181e18)}.reward-badge .medal{width:47px;height:59px}.reward-symbol .medal{width:67px;height:83px}.reward-symbol:has(.medal){border:0;background:none;box-shadow:none;height:90px}.next-goal .medal{width:58px;height:73px}
+@media(max-width:800px){.tabs{gap:22px}.focus-card{padding:22px 17px}.focus-card h3{font-size:21px}.focus-card .field input{height:60px;font-size:29px}.mode-buttons button{padding:8px 11px;font-size:10px}.coach-mode{gap:12px}.chart-card,.goal-editor{padding:18px 14px}.chart-controls{grid-template-columns:1fr 1fr;gap:11px}.chart-controls .coach-label:first-child{grid-column:1/-1}.chart-summary{gap:20px}.chart-summary b{font-size:20px}.chart-caption{font-size:10px}.goals-layout{grid-template-columns:1fr}.goal-list{grid-template-columns:1fr}.goal-dates{grid-template-columns:1fr 1fr}.coach-label select,.coach-label input{font-size:12px}.backup-reminder{display:block;padding:15px}.backup-actions{margin-top:12px;flex-wrap:wrap}.wellness-card{padding:17px 12px}.wellness-options{gap:4px}.wellness-option span{font-size:8px;padding:9px 2px}.wellness-save-status{display:block;margin:9px 0 0}.rest-dock{flex-wrap:wrap;padding:12px 14px;gap:11px;bottom:10px}.rest-time{font-size:34px;min-width:69px}.rest-info{min-width:140px}.rest-actions{width:100%;justify-content:flex-end;border-top:1px solid #45533a;padding-top:9px}.rest-actions button{padding:7px 11px}.rest-actions button:last-child{margin-right:auto;order:-1}body.has-rest-timer{padding-bottom:145px}.medal-legend{font-size:9px;gap:12px}.focus-hint{font-size:10px}}
+@media print{.rest-dock,.coach-mode,.backup-reminder,.goal-editor,.wellness-card{display:none!important}body.has-rest-timer{padding-bottom:0}.chart-card,.personal-goal{background:white;color:#111}}
+  </style>
+  <style id="comparison-style">
+.comparison-context{display:flex;align-items:center;gap:16px;flex-wrap:wrap;padding:12px 16px;border-left:2px solid #91b859;background:#1b2419;border-radius:0 6px 6px 0;margin:0 0 19px}.comparison-context strong{font-size:11px;color:#c7e79f;white-space:nowrap}.comparison-context span{font-size:10px;color:#acb8a1;line-height:1.5}
+.previous-set{border:1px solid #475a39;background:#24301e;border-radius:6px;padding:10px 11px;margin:0 0 14px;line-height:1.45}.previous-set-date{font-size:8px;letter-spacing:.3px;color:#b2c69c;margin-bottom:6px}.previous-set-values{display:flex;flex-wrap:wrap;align-items:baseline;gap:6px 13px;font-size:11px;color:#d8e9c2}.previous-set-values b{font-size:17px;color:#c4e892}.previous-weight-missing{font-size:9px;color:#90a27f}.set-comparison-difference{margin-top:8px;border-top:1px solid #435337;padding-top:7px;min-height:20px}.comparison-pending{font-size:9px;color:#a1b28d;display:block}.delta-values{display:flex;gap:6px 11px;flex-wrap:wrap}.set-delta{font-size:9px;color:#b1b9a6}.set-delta.up{color:#c4ed82}.set-delta.down{color:#ffaf83}.set-delta.load{color:#d4ddc9}.set-delta b{font-weight:750}.comparison-load-note{font-size:8px;color:#b0bea1;line-height:1.5;margin-top:6px}.previous-set.new-set{background:#1c2519;border-style:dashed}.focus-card .previous-set{max-width:460px;padding:16px 18px;margin:0 0 22px}.focus-card .previous-set-date{font-size:10px;margin-bottom:8px}.focus-card .previous-set-values{font-size:15px;gap:18px}.focus-card .previous-set-values b{font-size:27px}.focus-card .previous-weight-missing{font-size:11px}.focus-card .comparison-pending,.focus-card .set-delta{font-size:11px}.focus-card .comparison-load-note{font-size:10px}.focus-card .set-comparison-difference{padding-top:10px;margin-top:12px}
+@media(max-width:800px){.comparison-context{display:block;padding:11px 13px;margin-bottom:15px}.comparison-context strong{font-size:10px;white-space:normal;display:block;margin-bottom:4px}.comparison-context span{font-size:9px}.previous-set{padding:9px 8px}.previous-set-values{font-size:10px;gap:5px 8px}.previous-set-values b{font-size:15px}.previous-set-date{font-size:8px;line-height:1.5}.focus-card .previous-set{padding:14px 13px}.focus-card .previous-set-values{font-size:13px;gap:7px 13px}.focus-card .previous-set-values b{font-size:24px}.focus-card .previous-set-date{font-size:9px}.focus-card .set-delta{font-size:10px}}
+  </style>
+  <style id="training-mode-style">
+body.training-mode{background:radial-gradient(ellipse at 80% 0,#26302055,transparent 60%),#0e1112}.training-mode .shell{max-width:1140px;margin:auto;padding:0 32px}.training-mode .topbar{padding:19px 0}.training-mode .intro,.training-mode .motivation-banner,.training-mode .weekbox,.training-mode .stats,.training-mode .game-strip,.training-mode .tabs,.training-mode .habits-panel,.training-mode #backup-notice,.training-mode .footer{display:none}.training-mode .toolbar .button-text{display:none}.training-mode .toolbar .ghost{padding:9px}.training-mode #main{padding:19px 0 34px}.training-toolbar{display:flex;align-items:center;justify-content:space-between;gap:15px;margin-bottom:24px}.training-toolbar .ghost{padding:8px 12px;font-size:11px}.training-toolbar [role=status]{color:#a8b899;font-size:10px;text-align:right}.training-toolbar [role=status].error{color:#ffad88}.training-heading{display:flex;align-items:end;justify-content:space-between;gap:15px;margin-bottom:22px}.training-heading .eyebrow{font-size:10px;color:#c5d8ac;letter-spacing:1px;margin-bottom:8px}.training-heading h2{font:clamp(29px,3.8vw,43px) Impact,"Arial Narrow",sans-serif;letter-spacing:.6px;margin:0;text-transform:uppercase}.training-mode-tag{color:#87957d;font-size:10px;padding-bottom:7px}.training-progress{display:flex;gap:16px;align-items:center;background:#181f19;border:1px solid #35412f;border-radius:8px;padding:13px 18px;margin-bottom:20px}.training-count{white-space:nowrap;color:#c7ec92;font-size:23px;font-weight:750}.training-count span{font-size:12px;color:#9aab8c;font-weight:400}.training-progress-track{flex:1;min-width:0}.training-progress .progress-track{height:5px;margin:0}.training-progress p{font-size:10px;color:#a8b59b;margin:7px 0 0}.training-layout{display:grid;grid-template-columns:minmax(0,1fr) 285px;gap:18px;align-items:start}.training-main,.training-aside{min-width:0}.training-main .focus-card{padding:27px;min-height:540px}.training-main .focus-card .fields,.training-main .focus-card .primary,.training-main .focus-card .previous-set{max-width:none}.training-main .focus-card h3{font-size:clamp(23px,2.4vw,30px)}.training-main .focus-top{margin-bottom:21px}.training-main .focus-step-number{font-size:37px}.training-main .focus-card .date-text{font-size:10px;letter-spacing:.6px}.training-main .focus-card .previous-set{padding:13px 15px;margin-bottom:21px}.training-main .focus-card .previous-set-values b{font-size:24px}.training-main .focus-card .previous-set-date{font-size:10px}.training-main .focus-card .set-comparison-difference{margin-top:9px;padding-top:8px}.training-main .focus-card .field input{height:70px;font-size:36px}.training-field{flex:1;min-width:0}.rep-adjust{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:7px}.rep-adjust button{width:44px;height:37px;background:#283325;border:1px solid #586a46;border-radius:5px;color:#d3e8b9;font-size:24px;line-height:1;flex-shrink:0}.rep-adjust button:hover{background:#3c4c30;border-color:#a3be75}.rep-adjust span{font-size:9px;color:#8c9d7c;text-align:center}.training-main .focus-card .weight-field{max-width:none;display:flex;justify-content:start;gap:18px;margin-top:18px}.training-main .focus-card .weight-field input{width:100px;max-width:40%;height:44px;font-size:21px}.training-main .focus-card .primary{min-height:51px;margin-top:22px;font-size:13px}.training-main .focus-rest-copy{font-size:11px;line-height:1.6}.training-main .focus-hint{font-size:10px;line-height:1.6;margin-top:15px;padding-top:13px}.training-rest-card{border:1px solid #46573b;border-radius:9px;padding:20px;background:#1c251b}.training-rest-heading{display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:11px;font-weight:650}.rest-indicator{font-size:8px;color:#bac89f;font-weight:500;white-space:nowrap}.training-rest-card output{font:64px Impact,"Arial Narrow",sans-serif;color:#7d9270;display:block;letter-spacing:2px;line-height:1.2;margin:14px 0 9px;font-variant-numeric:tabular-nums}.training-rest-card.resting output{color:#c7ed8c}.training-rest-card.paused output{color:#e6cd95}.training-rest-card.ready output{color:var(--orange)}.training-rest-card p{font-size:10px;color:#aab89c;line-height:1.6;min-height:32px;margin:0 0 14px}.training-rest-actions{display:flex;gap:7px;flex-wrap:wrap;margin-bottom:16px}.training-rest-actions button{font-size:10px;padding:9px 11px}.training-rest-card .rest-setting{font-size:10px;border-top:1px solid #3b4a32;padding-top:13px;gap:7px}.training-rest-card .rest-setting input{width:55px;font-size:12px}.training-plan{margin-top:15px;border:1px solid #343e30;border-radius:9px;background:#171d17;padding:18px}.training-plan summary{font-size:12px;font-weight:700;color:#c7d4b8;cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:6px}.training-plan summary::-webkit-details-marker{display:none}.training-plan summary:after{content:'⌄';font-size:14px;color:#8c9b80}.training-plan summary span{color:#7e8f70;font-size:9px;font-weight:400;margin-left:auto;align-self:center}.training-plan ol{padding:0;list-style:none;margin:16px 0 0;display:flex;flex-direction:column;gap:14px}.training-plan li{display:flex;gap:10px;align-items:center}.plan-number{height:25px;width:25px;flex-shrink:0;display:grid;place-items:center;background:#232c20;color:#91a57f;border:1px solid #394c2f;border-radius:5px;font-size:10px}.training-plan strong{font-size:10px;color:#96a78a;line-height:1.45;font-weight:600;display:block}.training-plan li div>span{font-size:9px;color:#708363;display:block;margin-top:3px}.training-plan li.current .plan-number{color:#171b15;background:var(--orange);border-color:var(--orange)}.training-plan li.current strong{color:#f1dcc8}.training-plan li.current div>span{color:#cfa580}.training-plan li.done .plan-number{color:#bfe981;background:#2c3a20;border-color:#6f8d4b}.training-plan li.done strong{color:#c0d3aa}.training-mode .focus-card.done{min-height:250px}.training-mode .focus-card.done .ghost{margin-top:13px}.training-mode #storage-alert{margin-top:16px}
+@media(max-width:800px){.training-mode .shell{padding:0 18px}.training-mode .topbar{padding:14px 0}.training-mode #main{padding-top:15px}.training-toolbar{margin-bottom:18px;gap:9px}.training-toolbar .ghost{font-size:10px;padding:8px 10px}.training-toolbar [role=status]{font-size:9px;max-width:155px}.training-heading{margin-bottom:16px}.training-heading h2{font-size:29px}.training-heading .eyebrow{font-size:9px;letter-spacing:.5px}.training-mode-tag{display:none}.training-progress{padding:11px 13px;margin-bottom:14px;gap:12px}.training-count{font-size:22px}.training-progress p{font-size:9px}.training-layout{display:flex;flex-direction:column;gap:14px}.training-main,.training-aside{width:100%}.training-main .focus-card{padding:19px 16px;min-height:0}.training-main .focus-card h3{font-size:22px}.training-main .focus-card p{font-size:11px;margin-bottom:17px}.training-main .focus-top{margin-bottom:17px}.training-main .focus-step-number{font-size:32px}.training-main .focus-card .date-text{font-size:9px;line-height:1.5}.training-main .focus-card .eyebrow{font-size:9px;letter-spacing:1px}.training-main .focus-card .previous-set{padding:12px;margin-bottom:17px}.training-main .focus-card .previous-set-date{font-size:9px}.training-main .focus-card .previous-set-values{font-size:12px;gap:8px 14px}.training-main .focus-card .previous-set-values b{font-size:23px}.training-main .focus-card .field input{height:62px;font-size:31px}.rep-adjust{gap:5px}.rep-adjust button{width:38px;height:35px}.rep-adjust span{display:none}.training-main .focus-card .fields{gap:10px}.training-main .focus-card .weight-field{gap:12px;margin-top:16px;font-size:10px}.training-main .focus-card .weight-field input{height:40px;font-size:20px;width:90px}.training-main .focus-card .primary{font-size:11px;margin-top:18px}.training-main .focus-rest-copy{font-size:10px}.training-main .focus-hint{font-size:9px;margin-top:12px}.training-rest-card{padding:15px 17px}.training-rest-card output{font-size:47px;margin:9px 0 6px}.training-rest-card p{min-height:0;font-size:10px}.training-rest-actions{margin-bottom:12px}.training-rest-card .rest-setting{justify-content:start}.training-plan{padding:17px}.training-plan ol{display:grid;grid-template-columns:1fr 1fr;gap:12px}.training-plan li{align-items:start}.training-plan strong{font-size:10px}.training-mode.training-waiting .training-aside{order:-1}.training-mode.training-waiting .training-plan{display:none}}
+@media(max-width:370px){.training-mode .shell{padding:0 13px}.training-toolbar [role=status]{max-width:145px;font-size:8px}.training-heading h2{font-size:26px}.training-main .focus-card{padding:17px 14px}.training-main .focus-card h3{font-size:21px}.training-main .focus-top{align-items:start}.training-plan ol{grid-template-columns:1fr}.training-main .focus-card .comparison-load-note{font-size:9px}}
+@media print{.training-toolbar,.training-aside,.rep-adjust{display:none}.training-layout{display:block}.training-mode .focus-card{background:white;color:#111;border-color:#aaa}.training-mode .shell{padding:0}}
+  </style>
+  <style id="abs-variants-style">
+.set-variant{font-size:10px;font-weight:700;color:#e7c3a8;margin:0 0 10px;padding:5px 7px;background:#3a2b20;border:1px solid #725137;border-radius:4px;width:max-content;max-width:100%}.training-main .focus-card h3{overflow-wrap:break-word}
+@media(max-width:800px){.set-variant{font-size:9px;padding:4px 6px}}
+  </style>
+  <style id="audit-style">
+.workout-receipt{border:1px solid #657f49;background:linear-gradient(135deg,#2a3622,#18211a);border-radius:10px;padding:24px;margin:0 0 18px;min-width:0}.receipt-top{display:flex;justify-content:space-between;gap:17px;align-items:start}.receipt-top .eyebrow{color:#bed694;font-size:10px;letter-spacing:.7px;margin-bottom:8px}.receipt-top h3{font-size:23px;line-height:1.3;letter-spacing:-.4px;margin:0;color:#d9f3ba}.receipt-xp{color:#d6e68b;font-size:25px;font-weight:750;white-space:nowrap}.receipt-xp small{display:block;color:#9eb284;font-size:9px;font-weight:400;margin-top:4px;text-align:right}.receipt-facts{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin:22px 0;border-top:1px solid #465a37;border-bottom:1px solid #465a37;padding:16px 0}.receipt-facts span{color:#a4b99a;font-size:10px;line-height:1.5}.receipt-facts b{display:block;color:#d7eebc;font-size:24px;margin-bottom:3px}.workout-receipt>p{font-size:12px;color:#aebfa5;line-height:1.6;margin:0 0 17px}.workout-receipt>p strong{color:#d2e4c2;font-weight:600}.receipt-actions{display:flex;align-items:center;gap:9px;flex-wrap:wrap}.receipt-actions .primary{width:auto;font-size:11px;padding:13px 16px;margin:0}.receipt-actions .ghost{font-size:10px;padding:12px 13px}.receipt-copy{color:#91a786;font-size:9px;line-height:1.6;margin-top:12px}.training-main .receipt-top h3{font-size:25px}.training-main .receipt-facts b{font-size:23px}.training-main .receipt-actions{display:grid;grid-template-columns:1fr}.training-main .receipt-actions .primary{width:100%}.training-main .receipt-actions .ghost{width:100%}.training-main .workout-receipt{margin-bottom:0}
+@media(max-width:800px){.workout-receipt{padding:19px 16px}.receipt-top{gap:12px}.receipt-top h3,.training-main .receipt-top h3{font-size:20px}.receipt-xp{font-size:21px}.receipt-xp small{font-size:8px;white-space:normal}.receipt-facts{gap:8px;margin:17px 0;padding:13px 0}.receipt-facts b,.training-main .receipt-facts b{font-size:22px}.receipt-facts span{font-size:9px}.workout-receipt>p{font-size:11px}.receipt-actions{display:grid;grid-template-columns:1fr}.receipt-actions .primary,.receipt-actions .ghost{width:100%}.receipt-copy{font-size:9px}.receipt-top .eyebrow{font-size:9px}}
+@media(max-width:370px){.receipt-top{display:block}.receipt-xp{display:block;margin-top:12px}.receipt-xp small{display:inline;margin-left:7px}.receipt-facts b,.training-main .receipt-facts b{font-size:19px}}
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header class="topbar">
+      <div class="brand"><div class="brand-icon" aria-hidden="true"><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 48 48" role="img" aria-label="Свой темп — атлет на турнике"><title>Свой темп</title><rect width="48" height="48" rx="8" fill="#ff713c"/><g fill="none" stroke="#141818" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round"><path d="M10 12h28M15 12v9l9 9 9-9v-9M24 30v4m0 0-5 6m5-6 5 6"/><circle cx="24" cy="21" r="3.5"/></g></svg></div><div><div class="brand-name">Свой темп<span>.</span></div><div class="brand-note">WORKOUT / CALISTHENICS</div></div></div>
+      <div class="toolbar"><button class="ghost fullscreen-btn" id="fullscreen" aria-label="На весь экран" aria-pressed="false" title="На весь экран"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M8 3H3v5m13-5h5v5M3 16v5h5m13-5v5h-5"/></svg><span class="button-text" id="fullscreen-label">На весь экран</span></button><button class="ghost" id="export" aria-label="Скачать резервную копию" title="Скачать резервную копию"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 3v12m-4-4 4 4 4-4M4 16v5h16v-5"/></svg><span class="button-text">Скачать копию</span></button><button class="ghost" id="import" aria-label="Загрузить резервную копию" title="Загрузить резервную копию"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M12 16V4m-4 4 4-4 4 4M4 16v5h16v-5"/></svg><span class="button-text">Загрузить копию</span></button><input type="file" id="import-file" accept=".json,application/json" hidden></div>
+    </header>
+    <section class="intro">
+      <div class="hero-copy"><div class="eyebrow">Воркаут · калистеника · твой прогресс</div><h1>ТВОЁ ТЕЛО.<br><span>ТВОЯ СИЛА.</span></h1><p>Турник. Собственный вес. Дисциплина. Каждый подход — шаг вперёд.</p></div>
+      <div class="hero-art" aria-hidden="true"><div class="hero-stamp">СВОЙ ВЕС<b>100%</b>ТВОЯ РАБОТА</div>
+        <svg viewBox="0 0 390 220" fill="none"><path d="M50 203h304M86 27v176m227-176v176" stroke="#455046" stroke-width="5"/><path d="M74 27h251" stroke="#ff713c" stroke-width="7" stroke-linecap="round"/><path d="M156 29l-8 48 34 24m64-72 8 48-34 24" stroke="#ecefe4" stroke-width="12" stroke-linecap="round" stroke-linejoin="round"/><circle cx="201" cy="78" r="16" fill="#ff713c"/><path d="M181 104q20-12 40 0l-6 47-15 10-15-10Z" fill="#ecefe4"/><path d="m192 155-7 28-20 18m43-47 8 29 22 18" stroke="#ecefe4" stroke-width="12" stroke-linecap="round"/><path d="m189 119 24 0M201 129v19" stroke="#121715" stroke-width="2"/><path d="m139 28 25 0m73 0 24 0" stroke="#ffad88" stroke-width="6" stroke-linecap="round"/><path d="M321 76h34m-17 17h17M67 142H35m17 17H35" stroke="#ff713c66" stroke-width="2"/><circle cx="348" cy="131" r="18" stroke="#66705a" stroke-dasharray="3 4"/><path d="M341 131h14m-7-7v14" stroke="#ff713c" stroke-width="2"/></svg>
+        <div class="hero-art-caption">STRENGTH / CONTROL / REPEAT</div>
+      </div>
+    </section>
+    <section class="motivation-banner" aria-label="Мотивация"><div class="motivation-message"><span class="motivation-symbol" aria-hidden="true">↗</span><span id="motivation-line">Твой следующий рекорд начинается с сегодняшнего подхода.</span></div><div class="save-status" id="save-status" role="status">Записи сохраняются автоматически</div></section>
+    <div id="storage-alert" class="alert" role="alert" hidden></div>
+    <section class="backup-reminder" id="backup-notice" aria-label="Напоминание о резервной копии" hidden></section>
+    <section class="weekbox" aria-label="Недельное расписание"><div class="week-heading"><div class="week-heading-left"><button class="icon-btn" id="prev-week" aria-label="Предыдущая неделя">‹</button><button class="icon-btn" id="next-week" aria-label="Следующая неделя">›</button><h2 id="week-title"></h2></div><div class="week-controls"><button class="today-btn" id="today">Сегодня</button><label class="date-label"><span>Дата</span><input type="date" id="date-picker" aria-label="Выбрать дату"></label></div></div><div class="days" id="days"></div><div class="week-legend"><span><b>Пн / Чт</b> · верх тела</span><span><b>Вт / Пт</b> · низ тела</span><span><b>Ср / Сб / Вс</b> · отдых</span></div></section>
+    <section class="stats" aria-label="Прогресс"><div class="stat"><div class="stat-num" id="week-stat">0<small>/ 4</small></div><div class="stat-label"><strong>Тренировки</strong>завершено за неделю</div></div><div class="stat"><div class="stat-num" id="sets-stat">—</div><div class="stat-label"><strong>Подходы</strong>в выбранной тренировке</div></div><div class="stat"><div class="stat-num" id="records-stat">0<small>/ 9</small></div><div class="stat-label"><strong>Личные рекорды</strong>упражнений с результатом</div></div></section>
+    <section class="game-strip" id="game-strip" aria-label="Игровой прогресс"></section>
+    <nav class="tabs" aria-label="Разделы журнала"><button class="tab active" data-view="workout" aria-pressed="true">Тренировка</button><button class="tab" data-view="progress" aria-pressed="false">График</button><button class="tab" data-view="goals" aria-pressed="false">Цели</button><button class="tab" data-view="records" aria-pressed="false">Рекорды</button><button class="tab" data-view="history" aria-pressed="false">История <span class="tab-count" id="history-count">0</span></button><button class="tab" data-view="achievements" aria-pressed="false">Награды <span class="tab-count" id="badge-count">0</span></button></nav>
+    <section class="habits-panel" id="habits-panel" aria-label="Ежедневные привычки"></section>
+    <main id="main"></main>
+    <footer class="footer"><div>Записи хранятся в этом браузере на этом устройстве.<br>Скачивай резервную копию, чтобы сохранить или перенести свой журнал.</div><a href="https://www.youtube.com/watch?v=_4CuCqhbRDQ" target="_blank" rel="noopener noreferrer">Тренировка из видео ↗</a></footer>
+  </div>
+  <dialog class="reward-dialog" id="reward-dialog" aria-labelledby="reward-title"><div class="reward-content" id="reward-content"></div></dialog>
+  <section class="rest-dock" id="rest-dock" aria-label="Таймер отдыха" hidden></section>
+  <div class="toast" id="toast" role="status" hidden></div>
+  <noscript><p style="padding:24px;text-align:center">Для записи подходов включите JavaScript в браузере.</p></noscript>
+  <script id="screen-mode">
+    var WorkoutScreen = {
+      async toggle(doc) {
+        if (doc.fullscreenElement || doc.webkitFullscreenElement) {
+          const exit = doc.exitFullscreen || doc.webkitExitFullscreen;
+          if (!exit) throw Error('Fullscreen exit is unavailable');
+          await exit.call(doc);
+          return false;
+        }
+        const enter = doc.documentElement.requestFullscreen || doc.documentElement.webkitRequestFullscreen;
+        if (!enter) throw Error('Fullscreen is unavailable');
+        await enter.call(doc.documentElement);
+        return true;
+      }
+    };
+  </script>
+  <script id="tracker-core">
+    var Tracker = (() => {
+      const exercises = {
+        pushups:{name:'Обычные отжимания',count:4,note:'Почти до отказа',group:'Грудь · трицепс',weight:'Дополнительный вес'},
+        pullups:{name:'Подтягивания на турнике',count:4,note:'Запиши повторения в каждом подходе',group:'Спина · руки',weight:'Дополнительный вес'},
+        elevated:{name:'Отжимания с ногами на возвышении',count:3,note:'Ноги на устойчивом возвышении',group:'Грудь · плечи',weight:'Дополнительный вес'},
+        raises:{name:'Махи руками в стороны с гантелями',count:3,note:'Вес указывай для одной гантели',group:'Плечи',weight:'Вес одной гантели'},
+        abs:{name:'Пресс',count:3,note:'1-й подход — лёжа · остальные — на турнике',group:'Корпус',weight:'Дополнительный вес',range:[1,2,3,4,5]},
+        squats:{name:'Приседания',count:4,note:'До отказа — по плану из видео',group:'Ноги · ягодицы',weight:'Дополнительный вес'},
+        lunges:{name:'Выпады',count:3,note:'Повторения отдельно для каждой ноги',group:'Ноги · ягодицы',weight:'Общий дополнительный вес',sides:true},
+        bridge:{name:'Ягодичный мост',count:3,note:'3–4 подхода на выбор',group:'Ягодицы',weight:'Дополнительный вес',range:[3,4]},
+        calves:{name:'Подъёмы на носки стоя',count:3,note:'3–4 подхода на выбор',group:'Икры',weight:'Дополнительный вес',range:[3,4]}
+      };
+      const order={upper:['pushups','pullups','elevated','raises','abs'],lower:['squats','lunges','bridge','calves','abs']};
+      const parseDate = s => { if(typeof s!=='string'||!/^\d{4}-\d{2}-\d{2}$/.test(s)) throw Error('Некорректная дата'); const d=new Date(s+'T12:00:00Z'); if(!Number.isFinite(d.getTime())||d.toISOString().slice(0,10)!==s)throw Error('Некорректная дата');return d; };
+      const localDate=(now=new Date())=>{
+        if(!now||!Number.isFinite(now.getTime()))throw Error('Некорректное время');
+        return [now.getFullYear(),String(now.getMonth()+1).padStart(2,'0'),String(now.getDate()).padStart(2,'0')].join('-');
+      };
+      function dayRollover({today,selected,hold=false},currentDate){
+        parseDate(today);parseDate(selected);parseDate(currentDate);
+        const changed=today!==currentDate;
+        return {changed,today:currentDate,selected:changed&&selected===today&&!hold?currentDate:selected};
+      }
+      const addDays = (s,n) => {const d=parseDate(s);d.setUTCDate(d.getUTCDate()+n);return d.toISOString().slice(0,10);};
+      const scheduledType = s => ({1:'upper',2:'lower',4:'upper',5:'lower'})[parseDate(s).getUTCDay()]||'rest';
+      const weekDates = s => {const d=parseDate(s).getUTCDay();const monday=addDays(s,-((d+6)%7));return Array.from({length:7},(_,i)=>addDays(monday,i));};
+      const newSession = (date,type) => {parseDate(date);if(!order[type])throw Error('Некорректная тренировка');return {date,type,completed:false,updatedAt:Date.now(),exercises:Object.fromEntries(order[type].map(id=>[id,{target:exercises[id].count,sets:Array.from({length:exercises[id].count},()=>exercises[id].sides?{left:null,right:null,weight:null}:{reps:null,weight:null})}]))};};
+      const filledSet = (id,set) => exercises[id].sides ? set.left>0&&set.right>0 : set.reps>0;
+      const stats = session => {let filled=0,total=0;for(const id of order[session.type]){const e=session.exercises[id];total+=e.target;filled+=e.sets.slice(0,e.target).filter(s=>filledSet(id,s)).length;}return {filled,total};};
+      const hasData = session => Object.values(session.exercises).some(e=>e.sets.some(s=>Object.values(s).some(v=>v!==null)));
+      const records = data => {
+        const out=Object.fromEntries(Object.keys(exercises).map(id=>[id,{reps:0,left:0,right:0,weight:0,date:null,leftDate:null,rightDate:null,weightDate:null}]));
+        const sessions=Object.values(data.sessions).sort((a,b)=>a.date.localeCompare(b.date));
+        for(const session of sessions)for(const id of order[session.type]){const e=session.exercises[id];if(!e)continue;const r=out[id];for(const set of e.sets.slice(0,e.target)){for(const f of exercises[id].sides?['left','right']:['reps'])if(set[f]>r[f]){r[f]=set[f];r[f==='reps'?'date':f+'Date']=session.date;}if(filledSet(id,set)&&typeof set.weight==='number'&&(r.weightDate===null||set.weight>r.weight)){r.weight=set.weight;r.weightDate=session.date;}}}return out;
+      };
+      const validStamp=v=>Number.isFinite(v)&&v>=0;
+      function validateGoal(g,id){
+        if(!g||typeof id!=='string'||!/^[a-zA-Z0-9_-]{1,80}$/.test(id)||['__proto__','constructor','prototype'].includes(id)||g.id!==id||!['exercise','workouts','mornings'].includes(g.kind)||typeof g.deleted!=='boolean'||!validStamp(g.updatedAt))throw Error('Некорректная цель');
+        parseDate(g.startDate);parseDate(g.endDate);
+        if(g.startDate>g.endDate||!Number.isFinite(g.target)||g.target<=0||g.target>9999)throw Error('Проверь период и значение цели');
+        if(g.kind==='exercise'){
+          if(!exercises[g.exerciseId]||!['reps','weight'].includes(g.metric)||(g.metric==='reps'&&!Number.isInteger(g.target))||(g.metric==='weight'&&g.target>1000))throw Error('Некорректная цель упражнения');
+        }else if(g.exerciseId!==''||g.metric!==''||!Number.isInteger(g.target))throw Error('Некорректная цель количества');
+        if(g.variant!==undefined&&(g.kind!=='exercise'||g.exerciseId!=='abs'||!['all','floor','hang'].includes(g.variant)))throw Error('Некорректный вариант пресса в цели');
+        return {id,kind:g.kind,exerciseId:g.exerciseId,metric:g.metric,target:g.target,startDate:g.startDate,endDate:g.endDate,deleted:g.deleted,updatedAt:g.updatedAt,...(g.variant===undefined?{}:{variant:g.variant})};
+      }
+      function validateWellness(r){
+        if(!r||(r.rating!==null&&(!Number.isInteger(r.rating)||r.rating<1||r.rating>5))||typeof r.note!=='string'||r.note.length>1000||!validStamp(r.updatedAt))throw Error('Некорректная запись самочувствия');
+        return {rating:r.rating,note:r.note,updatedAt:r.updatedAt};
+      }
+      function validateSettings(s){
+        if(!s||typeof s.focus!=='boolean'||!Number.isInteger(s.restSeconds)||s.restSeconds<5||s.restSeconds>600||!validStamp(s.updatedAt))throw Error('Отдых: от 5 до 600 секунд');
+        return {focus:s.focus,restSeconds:s.restSeconds,updatedAt:s.updatedAt};
+      }
+      function validateTimer(t){
+        if(!t||!['idle','running','paused'].includes(t.status)||typeof t.sessionKey!=='string'||!validStamp(t.endsAt)||!Number.isInteger(t.remaining)||t.remaining<0||t.remaining>600||!validStamp(t.updatedAt))throw Error('Некорректный таймер');
+        if(t.sessionKey){const parts=t.sessionKey.split(':');parseDate(parts[0]);if(parts.length!==2||!order[parts[1]])throw Error('Некорректная тренировка таймера');}
+        if(t.status!=='idle'&&!t.sessionKey||t.status==='running'&&(!t.endsAt||t.remaining<1))throw Error('Некорректное время отдыха');
+        return {status:t.status,sessionKey:t.sessionKey,endsAt:t.endsAt,remaining:t.remaining,updatedAt:t.updatedAt};
+      }
+      function readBackup(text){
+        const raw=JSON.parse(text);if(!raw||raw.version!==1||!raw.sessions||typeof raw.sessions!=='object'||Array.isArray(raw.sessions))throw Error('Это не резервная копия журнала «Свой темп»');
+        const clean={version:1,sessions:{},habits:{},morningPlan:{items:[],updatedAt:0},goals:{},wellness:{},settings:{focus:false,restSeconds:90,updatedAt:0},restTimer:{status:'idle',sessionKey:'',endsAt:0,remaining:0,updatedAt:0},backupMeta:{exportedAt:0,snoozedUntil:0,updatedAt:0}};
+        if(Object.keys(raw.sessions).length>20000)throw Error('Слишком много записей');
+        const value=(v,weight)=>{if(v===null)return null;if(typeof v!=='number'||!Number.isFinite(v)||v<(weight?0:1)||v>(weight?1000:9999)||(!weight&&!Number.isInteger(v)))throw Error('В копии есть некорректные результаты');return v;};
+        for(const [key,s] of Object.entries(raw.sessions)){
+          if(!s||!order[s.type]||key!==s.date+':'+s.type||typeof s.completed!=='boolean'||!Number.isFinite(s.updatedAt)||s.updatedAt<0)throw Error('Некорректная запись тренировки');
+          const row=newSession(s.date,s.type);row.updatedAt=s.updatedAt;row.completed=s.completed;
+          for(const id of order[s.type]){const e=s.exercises?.[id],def=exercises[id];if(!e||!(def.range||[def.count]).includes(e.target)||!Array.isArray(e.sets)||e.sets.length!==e.target)throw Error('Некорректное число подходов');row.exercises[id]={target:e.target,sets:e.sets.map(set=>{if(!set||typeof set!=='object')throw Error('Некорректный подход');return def.sides?{left:value(set.left,false),right:value(set.right,false),weight:value(set.weight,true)}:{reps:value(set.reps,false),weight:value(set.weight,true)};})};}
+          if(row.completed&&stats(row).filled!==stats(row).total)throw Error('Завершённая тренировка содержит пустые подходы');clean.sessions[key]=row;
+        }
+        if(raw.habits!==undefined){
+          if(!raw.habits||typeof raw.habits!=='object'||Array.isArray(raw.habits)||Object.keys(raw.habits).length>20000)throw Error('Некорректный журнал привычек');
+          for(const [date,row] of Object.entries(raw.habits)){
+            parseDate(date);
+            if(!row||typeof row!=='object'||Array.isArray(row))throw Error('Некорректная запись привычек');
+            clean.habits[date]={};
+            for(const [kind,mark] of Object.entries(row)){
+              if(!['morning','creatine'].includes(kind)||!mark||typeof mark.done!=='boolean'||!Number.isFinite(mark.updatedAt)||mark.updatedAt<0)throw Error('Некорректная отметка привычки');
+              const entry={done:mark.done,updatedAt:mark.updatedAt};
+              if(mark.items!==undefined||mark.checks!==undefined){
+                if(kind!=='morning'||!Array.isArray(mark.items)||mark.items.length>30||mark.items.some(item=>typeof item!=='string'||!item.trim()||item.length>120)||!Array.isArray(mark.checks)||mark.checks.length!==mark.items.length||mark.checks.some(v=>typeof v!=='boolean')||(mark.items.length>0&&mark.done!==mark.checks.every(Boolean)))throw Error('Некорректные шаги зарядки');
+                entry.items=[...mark.items];entry.checks=[...mark.checks];
+              }
+              clean.habits[date][kind]=entry;
+            }
+          }
+        }
+        if(raw.morningPlan!==undefined){
+          const plan=raw.morningPlan;
+          if(!plan||!Array.isArray(plan.items)||plan.items.length>30||!Number.isFinite(plan.updatedAt)||plan.updatedAt<0||plan.items.some(item=>typeof item!=='string'||!item.trim()||item.length>120))throw Error('Некорректный комплекс зарядки');
+          clean.morningPlan={items:plan.items.map(item=>item.trim()),updatedAt:plan.updatedAt};
+        }
+        for(const name of ['goals','wellness'])if(raw[name]!==undefined){
+          if(!raw[name]||typeof raw[name]!=='object'||Array.isArray(raw[name])||Object.keys(raw[name]).length>20000)throw Error('Некорректные дополнительные записи');
+          for(const [key,row] of Object.entries(raw[name])){if(name==='wellness')parseDate(key);clean[name][key]=name==='goals'?validateGoal(row,key):validateWellness(row);}
+        }
+        if(raw.settings!==undefined)clean.settings=validateSettings(raw.settings);
+        if(raw.restTimer!==undefined)clean.restTimer=validateTimer(raw.restTimer);
+        if(raw.backupMeta!==undefined){const m=raw.backupMeta;if(!m||!validStamp(m.exportedAt)||!validStamp(m.snoozedUntil)||!validStamp(m.updatedAt))throw Error('Некорректные сведения о копии');clean.backupMeta={exportedAt:m.exportedAt,snoozedUntil:m.snoozedUntil,updatedAt:m.updatedAt};}
+        return clean;
+      }
+      const merge=(a,b)=>{
+        const out=JSON.parse(JSON.stringify(a));
+        for(const [key,s] of Object.entries(b.sessions))if(!out.sessions[key]||s.updatedAt>out.sessions[key].updatedAt)out.sessions[key]=s;
+        out.habits=out.habits||{};
+        for(const [date,row] of Object.entries(b.habits||{})){
+          out.habits[date]=out.habits[date]||{};
+          for(const [kind,mark] of Object.entries(row))if(!out.habits[date][kind]||mark.updatedAt>out.habits[date][kind].updatedAt)out.habits[date][kind]={...mark};
+        }
+        if(b.morningPlan&&(!out.morningPlan||b.morningPlan.updatedAt>out.morningPlan.updatedAt))out.morningPlan={items:[...b.morningPlan.items],updatedAt:b.morningPlan.updatedAt};
+        out.morningPlan=out.morningPlan||{items:[],updatedAt:0};
+        for(const name of ['goals','wellness']){out[name]=out[name]||{};for(const [key,row] of Object.entries(b[name]||{}))if(!out[name][key]||row.updatedAt>out[name][key].updatedAt)out[name][key]={...row};}
+        for(const name of ['settings','restTimer','backupMeta'])if(b[name]&&(!out[name]||b[name].updatedAt>out[name].updatedAt))out[name]={...b[name]};
+        out.settings=out.settings||{focus:false,restSeconds:90,updatedAt:0};out.restTimer=out.restTimer||{status:'idle',sessionKey:'',endsAt:0,remaining:0,updatedAt:0};out.backupMeta=out.backupMeta||{exportedAt:0,snoozedUntil:0,updatedAt:0};
+        return out;
+      };
+      return {exercises,order,parseDate,localDate,dayRollover,addDays,scheduledType,weekDates,newSession,filledSet,stats,hasData,records,readBackup,merge,validateGoal,validateWellness,validateSettings,validateTimer};
+    })();
+  </script>
+  <script id="habits-core">
+    var DailyHabits = (() => {
+      const T=Tracker;
+      const hasWorkout=(data,date)=>Object.values(data.sessions).some(s=>s.date===date&&s.completed&&T.stats(s).filled===T.stats(s).total);
+      function state(data,date){
+        T.parseDate(date);
+        const row=data.habits?.[date]||{},morning=!!row.morning?.done,creatine=!!row.creatine?.done;
+        const items=row.morning?.items?.length?row.morning.items:data.morningPlan?.items||[];
+        const checks=row.morning?.checks?.length?row.morning.checks:items.map(()=>morning);
+        return {morning,creatine,canCreatine:creatine||hasWorkout(data,date),items:[...items],checks:[...checks]};
+      }
+      function set(data,date,kind,done,updatedAt=Date.now()){
+        T.parseDate(date);
+        if(!['morning','creatine'].includes(kind)||typeof done!=='boolean'||!Number.isFinite(updatedAt)||updatedAt<0)throw Error('Некорректная отметка');
+        if(kind==='creatine'&&done&&!hasWorkout(data,date))throw Error('Сначала заверши тренировку за эту дату');
+        const row=data.habits?.[date]||{},stamp=Math.max(updatedAt,(row[kind]?.updatedAt??-1)+1);
+        const mark={done,updatedAt:stamp};
+        if(kind==='morning'){const items=state(data,date).items;mark.items=items;mark.checks=items.map(()=>done);}
+        return {...data,habits:{...data.habits,[date]:{...row,[kind]:mark}}};
+      }
+      function setPlan(data,text,updatedAt=Date.now()){
+        if(typeof text!=='string'||!Number.isFinite(updatedAt)||updatedAt<0)throw Error('Некорректный комплекс');
+        const items=text.split(/\r?\n/).map(item=>item.trim()).filter(Boolean);
+        if(items.length>30||items.some(item=>item.length>120))throw Error('До 30 упражнений, название каждого — до 120 символов');
+        return {...data,morningPlan:{items,updatedAt:Math.max(updatedAt,(data.morningPlan?.updatedAt??-1)+1)}};
+      }
+      function step(data,date,index,done,updatedAt=Date.now()){
+        const current=state(data,date),row=data.habits?.[date]||{};
+        if(!Number.isInteger(index)||index<0||index>=current.items.length||typeof done!=='boolean'||!Number.isFinite(updatedAt)||updatedAt<0)throw Error('Некорректный шаг зарядки');
+        const checks=[...current.checks];checks[index]=done;
+        const mark={items:current.items,checks,done:checks.every(Boolean),updatedAt:Math.max(updatedAt,(row.morning?.updatedAt??-1)+1)};
+        return {...data,habits:{...data.habits,[date]:{...row,morning:mark}}};
+      }
+      return {state,set,setPlan,step};
+    })();
+  </script>
+  <script id="coach-core">
+    var WorkoutTools = (() => {
+      const T=Tracker;
+      const stamp=(now,old=0)=>{if(!Number.isFinite(now)||now<0)throw Error('Некорректное время');return Math.max(now,old+1);};
+      const defaults={focus:false,restSeconds:90,updatedAt:0};
+      function stepReps(current,direction){
+        if(![1,-1].includes(direction)||(current!==null&&(!Number.isInteger(current)||current<1||current>9999)))throw Error('Введи корректное число повторений');
+        return current===null?(direction===1?1:null):Math.max(1,Math.min(9999,current+direction));
+      }
+      function previousSession(data,date,type){
+        T.parseDate(date);if(!T.order[type])throw Error('Некорректный тип тренировки');
+        return Object.values(data.sessions).filter(s=>s.type===type&&s.date<date&&s.completed&&T.stats(s).filled===T.stats(s).total).sort((a,b)=>b.date.localeCompare(a.date))[0]||null;
+      }
+      function previousExerciseSession(data,date,type,id){
+        if(!T.order[type]?.includes(id))throw Error('Некорректное упражнение для сравнения');
+        if(id!=='abs')return previousSession(data,date,type);
+        T.parseDate(date);
+        return Object.values(data.sessions).filter(s=>s.date<date&&s.completed&&T.stats(s).filled===T.stats(s).total).sort((a,b)=>b.date.localeCompare(a.date)||b.updatedAt-a.updatedAt)[0]||null;
+      }
+      function compareSet(previous,id,index,current={}){
+        const def=T.exercises[id];if(!def||!Number.isInteger(index)||index<0)throw Error('Некорректный подход для сравнения');
+        const empty={date:previous?.date||null,previous:null,deltas:{},load:'unknown'};
+        if(!previous)return {...empty,state:'first'};
+        const e=previous.exercises[id];
+        if(!e||index>=e.target)return {...empty,state:'new-set'};
+        const set=e.sets[index];if(!set||!T.filledSet(id,set))return {...empty,state:'missing'};
+        const deltas={};
+        for(const key of def.sides?['left','right']:['reps'])deltas[key]=Number.isInteger(current[key])&&current[key]>0&&current[key]<=9999?current[key]-set[key]:null;
+        const validWeight=v=>typeof v==='number'&&Number.isFinite(v)&&v>=0&&v<=1000;
+        const known=validWeight(set.weight)&&validWeight(current.weight);
+        deltas.weight=known?Number((current.weight-set.weight).toFixed(2)):null;
+        return {state:'matched',date:previous.date,previous:{...set},deltas,load:known?(deltas.weight===0?'same':'changed'):'unknown'};
+      }
+      function nextSet(session){
+        let position=0;
+        for(const [exerciseIndex,id] of T.order[session.type].entries()){
+          const e=session.exercises[id];
+          for(let index=0;index<e.target;index++){
+            position++;
+            if(!T.filledSet(id,e.sets[index]))return {id,index,exerciseIndex,position,total:T.stats(session).total};
+          }
+        }
+        return null;
+      }
+      function commitSet(data,key,id,index,values,now=Date.now()){
+        const split=key.split(':'),date=split[0],type=split[1];T.parseDate(date);
+        if(split.length!==2||!T.order[type])throw Error('Некорректная тренировка');
+        const s=JSON.parse(JSON.stringify(data.sessions[key]||T.newSession(date,type))),next=nextSet(s);
+        if(!next||next.id!==id||next.index!==index)throw Error('Текущий подход уже изменился. Проверь следующий.');
+        const def=T.exercises[id],validRep=v=>Number.isInteger(v)&&v>=1&&v<=9999;
+        if(def.sides?(!validRep(values.left)||!validRep(values.right)):!validRep(values.reps))throw Error('Запиши повторения от 1 до 9999 в каждом поле.');
+        const weight=values.weight??null;
+        if(weight!==null&&(!Number.isFinite(weight)||weight<0||weight>1000))throw Error('Вес должен быть от 0 до 1000 кг.');
+        s.exercises[id].sets[index]=def.sides?{left:values.left,right:values.right,weight}:{reps:values.reps,weight};
+        s.completed=false;s.updatedAt=stamp(now,s.updatedAt);
+        return {...data,sessions:{...data.sessions,[key]:s}};
+      }
+      function setSettings(data,changes,now=Date.now()){
+        const settings=T.validateSettings({...defaults,...data.settings,...changes,updatedAt:stamp(now,data.settings?.updatedAt)});
+        return {...data,settings};
+      }
+      function timerRemaining(timer,now=Date.now()){
+        if(timer?.status==='running')return Math.max(0,Math.ceil((timer.endsAt-now)/1000));
+        return timer?.status==='paused'?timer.remaining:0;
+      }
+      function timerTransition(timer,action,{now=Date.now(),key,seconds}={}){
+        const old=timer||{},updatedAt=stamp(now,old.updatedAt),base={status:'idle',sessionKey:old.sessionKey||'',endsAt:0,remaining:0,updatedAt};
+        if(action==='start'){if(!Number.isInteger(seconds)||seconds<5||seconds>600)throw Error('Отдых: от 5 до 600 секунд');return T.validateTimer({...base,status:'running',sessionKey:key,endsAt:now+seconds*1000,remaining:seconds});}
+        if(action==='pause'&&old.status==='running'){
+          const remaining=timerRemaining(old,now);return T.validateTimer({...base,status:remaining?'paused':'idle',remaining});
+        }
+        if(action==='resume'&&old.status==='paused'&&old.remaining>0)return T.validateTimer({...base,status:'running',remaining:old.remaining,endsAt:now+old.remaining*1000});
+        if(action==='skip')return T.validateTimer(base);
+        throw Error('Таймер уже изменился.');
+      }
+      const absIndexMatches=(variant,index)=>variant==='all'||(variant==='floor'?index===0:index>0);
+      function statChoices(combined=true){
+        return Object.entries(T.exercises).flatMap(([id,def])=>id==='abs'?[
+          {...def,key:'abs-floor',id,variant:'floor',name:'Пресс лёжа'},
+          {...def,key:'abs-hang',id,variant:'hang',name:'Пресс на турнике'},
+          ...(combined?[{...def,key:'abs',id,variant:'all',name:'Пресс — все подходы'}]:[])
+        ]:[{...def,key:id,id,variant:'all'}]);
+      }
+      function statDefinition(key){const def=statChoices().find(x=>x.key===key);if(!def)throw Error('Неизвестный показатель');return def;}
+      const goalExerciseKey=goal=>goal.exerciseId==='abs'&&goal.variant&&goal.variant!=='all'?'abs-'+goal.variant:goal.exerciseId;
+      function statRecords(data){
+        const base=T.records(data),out={};
+        for(const def of statChoices(false)){
+          if(def.id!=='abs'){out[def.key]=base[def.id];continue;}
+          const filtered={sessions:Object.fromEntries(Object.entries(data.sessions).map(([key,s])=>{
+            const e=s.exercises.abs,sets=e.sets.slice(0,e.target).filter((_,i)=>absIndexMatches(def.variant,i));
+            return [key,{...s,exercises:{...s.exercises,abs:{target:sets.length,sets}}}];
+          }))};
+          out[def.key]=T.records(filtered).abs;
+        }
+        return out;
+      }
+      function nextPlanned(data,finishedDate,today){
+        T.parseDate(finishedDate);T.parseDate(today);let date=finishedDate<today?today:T.addDays(finishedDate,1);
+        for(let n=0;n<40000;n++){
+          if(!/^\d{4}-\d{2}-\d{2}$/.test(date))return null;
+          const type=T.scheduledType(date),s=data.sessions[date+':'+type];
+          if(type!=='rest'&&(!s?.completed||T.stats(s).filled!==T.stats(s).total))return {date,type};
+          date=T.addDays(date,1);
+        }
+        return null;
+      }
+      function series(data,id,metric,from,to,variant='all'){
+        if(!T.exercises[id]||!['reps','weight'].includes(metric)||!['all','floor','hang'].includes(variant)||(id!=='abs'&&variant!=='all'))throw Error('Некорректный график');
+        T.parseDate(from);T.parseDate(to);const points=new Map();
+        for(const s of Object.values(data.sessions)){
+          if(s.date<from||s.date>to||!s.exercises[id])continue;
+          const e=s.exercises[id];
+          for(const [index,set] of e.sets.slice(0,e.target).entries()){
+            if(id==='abs'&&!absIndexMatches(variant,index))continue;
+            if(!T.filledSet(id,set))continue;
+            const value=metric==='weight'?set.weight:T.exercises[id].sides?Math.min(set.left,set.right):set.reps;
+            if(value===null||value===undefined)continue;
+            if(!points.has(s.date)||value>points.get(s.date))points.set(s.date,value);
+          }
+        }
+        return [...points].sort(([a],[b])=>a.localeCompare(b)).map(([date,value])=>({date,value}));
+      }
+      function saveGoal(data,input,now=Date.now()){
+        const row=T.validateGoal({...input,deleted:false,updatedAt:stamp(now,data.goals?.[input.id]?.updatedAt)},input.id);
+        return {...data,goals:{...data.goals,[row.id]:row}};
+      }
+      function cancelGoal(data,id,now=Date.now()){
+        const row=data.goals?.[id];if(!row)throw Error('Цель не найдена');
+        return {...data,goals:{...data.goals,[id]:{...row,deleted:true,updatedAt:stamp(now,row.updatedAt)}}};
+      }
+      function goalProgress(data,goal,today){
+        T.parseDate(today);let value=0;const until=goal.endDate<today?goal.endDate:today;
+        if(until>=goal.startDate){
+          if(goal.kind==='exercise')value=Math.max(0,...series(data,goal.exerciseId,goal.metric,goal.startDate,until,goal.variant||'all').map(p=>p.value));
+          else if(goal.kind==='workouts')value=Object.values(data.sessions).filter(s=>s.date>=goal.startDate&&s.date<=until&&s.completed&&T.stats(s).filled===T.stats(s).total).length;
+          else value=Object.entries(data.habits||{}).filter(([date,row])=>date>=goal.startDate&&date<=until&&row.morning?.done).length;
+        }
+        const reached=value>=goal.target;
+        return {value,reached,percent:Math.min(100,value/goal.target*100),expired:today>goal.endDate&&!reached,pending:today<goal.startDate};
+      }
+      function setWellness(data,date,rating,note,now=Date.now()){
+        T.parseDate(date);
+        if(!Object.values(data.sessions).some(s=>s.date===date&&s.completed))throw Error('Сначала заверши тренировку за этот день.');
+        const row=T.validateWellness({rating,note,updatedAt:stamp(now,data.wellness?.[date]?.updatedAt)});
+        return {...data,wellness:{...data.wellness,[date]:row}};
+      }
+      function backupStatus(data,now=Date.now()){
+        const stamps=[...Object.values(data.sessions).map(s=>s.updatedAt),...Object.values(data.habits||{}).flatMap(row=>Object.values(row).map(mark=>mark.updatedAt)),...Object.values(data.goals||{}).map(g=>g.updatedAt),...Object.values(data.wellness||{}).map(r=>r.updatedAt)];
+        if(data.morningPlan?.updatedAt>0)stamps.push(data.morningPlan.updatedAt);
+        const latest=Math.max(0,...stamps),meta=data.backupMeta||{},exportedAt=meta.exportedAt||0,dirty=stamps.length>0&&latest>exportedAt;
+        return {dirty,due:dirty&&now>=(meta.snoozedUntil||0)&&(!exportedAt||now-exportedAt>=7*86400000),exportedAt};
+      }
+      function prepareBackup(data,now=Date.now()){
+        return {...data,backupMeta:{exportedAt:now,snoozedUntil:0,updatedAt:stamp(now,data.backupMeta?.updatedAt)}};
+      }
+      function snoozeBackup(data,now=Date.now()){
+        return {...data,backupMeta:{exportedAt:data.backupMeta?.exportedAt||0,snoozedUntil:now+86400000,updatedAt:stamp(now,data.backupMeta?.updatedAt)}};
+      }
+      return {statChoices,statDefinition,statRecords,goalExerciseKey,nextPlanned,stepReps,previousSession,previousExerciseSession,compareSet,nextSet,commitSet,setSettings,timerRemaining,timerTransition,series,saveGoal,cancelGoal,goalProgress,setWellness,backupStatus,prepareBackup,snoozeBackup};
+    })();
+  </script>
+  <script id="game-core">
+    var WorkoutGame = (() => {
+      const T=Tracker;
+      const completed=data=>Object.values(data.sessions).filter(s=>s.completed&&T.stats(s).filled===T.stats(s).total);
+      const planned=date=>T.weekDates(date).filter(d=>T.scheduledType(d)!=='rest');
+      function challenge(data,date){
+        const dates=new Set(completed(data).map(s=>s.date));
+        const days=planned(date).map(d=>({date:d,done:dates.has(d)}));
+        const count=days.filter(d=>d.done).length;
+        return {days,count,done:count===4};
+      }
+      function summarize(data,today){
+        T.parseDate(today);
+        const workouts=completed(data),dates=new Set(workouts.map(s=>s.date)),weeks=new Map();
+        for(const date of dates){
+          if(T.scheduledType(date)==='rest')continue;
+          const monday=T.weekDates(date)[0];
+          if(!weeks.has(monday))weeks.set(monday,new Set());
+          weeks.get(monday).add(date);
+        }
+        const fullWeeks=Array.from(weeks).filter(([,days])=>days.size===4).map(([monday])=>monday).sort();
+        const mornings=Object.values(data.habits||{}).filter(row=>row.morning?.done).length;
+        const xp=workouts.length*100+fullWeeks.length*200+mornings*20,level=Math.floor(xp/300)+1;
+        const rank=level>=12?'Легенда площадки':level>=8?'Мастер турника':level>=5?'Уличный атлет':level>=3?'В ритме':level>=2?'Атлет':'На старте';
+        let anchor=today,streak=0;
+        while(T.scheduledType(anchor)==='rest')anchor=T.addDays(anchor,-1);
+        if(anchor===today&&!dates.has(anchor)){
+          anchor=T.addDays(anchor,-1);
+          while(T.scheduledType(anchor)==='rest')anchor=T.addDays(anchor,-1);
+        }
+        while(dates.has(anchor)){
+          streak++;
+          anchor=T.addDays(anchor,-1);
+          while(T.scheduledType(anchor)==='rest')anchor=T.addDays(anchor,-1);
+        }
+        const types=new Set(workouts.map(s=>s.type)),bestWeek=Math.max(0,...Array.from(weeks.values(),days=>days.size));
+        const definitions=[
+          {id:'first',title:'Первый финиш',copy:'Заверши свою первую тренировку.',icon:'bolt',goal:1,value:workouts.length},
+          {id:'balance',title:'Полный атлет',copy:'Заверши тренировку верха и тренировку низа.',icon:'balance',goal:2,value:types.size},
+          {id:'week',title:'Неделя силы',copy:'Закрой все четыре дня плана в одной неделе.',icon:'shield',goal:4,value:bestWeek},
+          {id:'five',title:'Входишь в ритм',copy:'Накопи пять завершённых тренировок.',icon:'flame',goal:5,value:workouts.length},
+          {id:'ten',title:'Характер в деле',copy:'Заверши десять тренировок.',icon:'star',goal:10,value:workouts.length},
+          {id:'twentyfive',title:'Своя площадка',copy:'Дойди до двадцати пяти тренировок.',icon:'crown',goal:25,value:workouts.length},
+          {id:'morning-seven',title:'Утренний ритм',copy:'Выполни утреннюю зарядку в семь разных дней.',icon:'sun',goal:7,value:mornings}
+        ];
+        const badges=definitions.map(b=>({...b,progress:Math.min(b.goal,b.value),unlocked:b.value>=b.goal}));
+        return {workouts:workouts.length,mornings,xp,level,rank,levelXp:xp%300,toNextLevel:300-xp%300,fullWeeks,streak,badges};
+      }
+      function reward(before,after){
+        const xp=Math.max(0,after.xp-before.xp),weekXp=Math.max(0,after.fullWeeks.length-before.fullWeeks.length)*200;
+        const earned=new Set(before.badges.filter(b=>b.unlocked).map(b=>b.id));
+        return {xp,workoutXp:Math.max(0,after.workouts-before.workouts)*100,morningXp:Math.max(0,after.mornings-before.mornings)*20,weekXp,levelUp:after.level>before.level,badges:after.badges.filter(b=>b.unlocked&&!earned.has(b.id))};
+      }
+      return {summarize,challenge,reward};
+    })();
+  </script>
+  <script>
+    (() => {
+      'use strict';
+      const T=Tracker,G=WorkoutGame,H=DailyHabits,W=WorkoutTools,KEY='svoi-temp-workouts-v1',$=id=>document.getElementById(id);
+      let today=T.localDate();
+      let data=T.readBackup('{"version":1,"sessions":{}}'),selected=today,view='workout',override=null,saveBlocked=false,toastTimer;
+      const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
+      const fmt=(date,options={day:'numeric',month:'long'})=>T.parseDate(date).toLocaleDateString('ru-RU',{...options,timeZone:'UTC'});
+      const short=date=>fmt(date,{day:'numeric',month:'short'});
+      const label=type=>type==='upper'?'Верх тела':type==='lower'?'Низ тела':'Восстановление';
+      const type=()=>override||T.scheduledType(selected);
+      const session=()=>type()==='rest'?null:data.sessions[selected+':'+type()]||T.newSession(selected,type());
+      const invalidInputs=()=>Array.from($('main').querySelectorAll('input')).some(input=>!input.validity.valid);
+      const sessions=()=>Object.values(data.sessions).filter(T.hasData).sort((a,b)=>b.date.localeCompare(a.date)||b.updatedAt-a.updatedAt);
+      function toast(message){clearTimeout(toastTimer);$('toast').textContent=message;$('toast').hidden=false;toastTimer=setTimeout(()=>$('toast').hidden=true,4500);}
+      function storageError(message){$('save-status').textContent='Не удалось сохранить записи';$('save-status').classList.add('error');$('storage-alert').textContent=message;$('storage-alert').hidden=false;}
+      try{const stored=localStorage.getItem(KEY);if(stored)data=T.readBackup(stored);}catch(e){saveBlocked=true;storageError('Не удалось открыть сохранённый журнал. Текущие записи остаются в памяти до закрытия страницы — скачайте копию. Исходное хранилище не будет перезаписано.');}
+      function save(){if(saveBlocked)return false;try{localStorage.setItem(KEY,JSON.stringify(data));$('save-status').textContent='Сохранено в этом браузере';$('save-status').classList.remove('error');$('storage-alert').hidden=true;return true;}catch(e){storageError('Браузер не разрешил сохранение. Скачайте резервную копию перед закрытием страницы.');return false;}}
+      let focusDraft=null,chartExercise='pullups',chartMetric='reps',chartRange='30',editingGoalId=null,goalFormBaseline=null,timerNotice=0;
+      const coachKey=()=>selected+':'+type();
+      const restSeconds=()=>data.settings?.restSeconds||90;
+      const focusMode=()=>!!data.settings?.focus;
+      const moodLabels=['Тяжело','Устал','Нормально','Хорошо','Отлично'];
+      function medal(b,locked=false){
+        const tier=['twentyfive','personal'].includes(b.id)?'gold':['week','ten','morning-seven'].includes(b.id)?'silver':'bronze';
+        const palette={bronze:['#d99155','#91592f','#ffc391','#ed7b44'],silver:['#d9e4e8','#82969b','#f4fcff','#829fb1'],gold:['#e7c66d','#98803a','#fff0b0','#afd469']}[tier];
+        const symbol=gameIcon(b.icon).replace('class="game-icon"','class="medal-symbol" x="25" y="43" width="30" height="30" style="color:#2b3026"');
+        return `<span class="medal ${tier} ${locked?'locked':''}" role="img" aria-label="${locked?'Закрытая ':''}${{bronze:'Бронзовая',silver:'Серебряная',gold:'Золотая'}[tier]} медаль: ${escape(b.title)}"><svg viewBox="0 0 80 100" aria-hidden="true"><path d="M15 2h18l15 35-16 9L15 2Zm33 0h18L49 45l-15-9L48 2Z" fill="${palette[3]}"/><path d="m24 2 18 38m15-38L40 39" stroke="#ffffff" stroke-opacity=".3" stroke-width="3"/><circle cx="40" cy="58" r="31" fill="${palette[1]}"/><circle cx="40" cy="57" r="28" fill="${palette[0]}" stroke="${palette[2]}" stroke-width="2"/><circle cx="40" cy="57" r="22" fill="none" stroke="${palette[1]}" stroke-width="1.4"/><path d="M23 39a25 25 0 0 1 29-4" fill="none" stroke="${palette[2]}" stroke-width="3" stroke-linecap="round"/>${symbol}<path d="m34 84 6 9 6-9" fill="${palette[1]}"/></svg></span>`;
+      }
+      function wellnessEditor(date,suffix='day'){
+        const row=data.wellness?.[date]||{rating:null,note:''};
+        return `<section class="wellness-card" data-wellness-date="${date}"><h3>Как ты после тренировки?</h3><p>Оценка за ${short(date)} · необязательно, можно заполнить позже.</p><div class="wellness-options">${moodLabels.map((text,i)=>`<label class="wellness-option"><input type="radio" name="wellness-${suffix}" value="${i+1}" aria-label="Самочувствие: ${text.toLowerCase()}" ${row.rating===i+1?'checked':''}><span><b aria-hidden="true">${['😮‍💨','😴','🙂','💪','🔥'][i]}</b>${text}</span></label>`).join('')}</div><label class="wellness-note">Заметка о тренировке<textarea rows="2" maxlength="1000" placeholder="Что получилось и как ты себя чувствуешь?" aria-label="Заметка о самочувствии">${escape(row.note)}</textarea></label><button class="ghost" type="button" data-save-wellness="${date}">Сохранить самочувствие</button><span class="wellness-save-status" role="status">${row.updatedAt?'Оценка записана':''}</span></section>`;
+      }
+      function coachModeBar(){
+        return `<div class="coach-mode"><div class="mode-buttons" aria-label="Режим записи подходов"><button type="button" class="${focusMode()?'':'active'}" data-focus="false" aria-pressed="${!focusMode()}">Все подходы</button><button type="button" class="${focusMode()?'active':''}" data-focus="true" aria-pressed="${focusMode()}">Режим тренировки</button></div><label class="rest-setting">Отдых <input id="rest-seconds" type="number" inputmode="numeric" min="5" max="600" step="1" value="${restSeconds()}" aria-label="Длительность отдыха, секунды"> сек.</label></div>`;
+      }
+      let comparisonBaseline=null,absComparisonBaseline=null;
+      const numberText=n=>Number(n).toLocaleString('ru-RU',{maximumFractionDigits:2});
+      const baselineFor=id=>id==='abs'?absComparisonBaseline:comparisonBaseline;
+      const setVariant=(id,index)=>id==='abs'?(index===0?'Лёжа':'На турнике'):'';
+      const setName=(id,index)=>T.exercises[id].name+(id==='abs'?' '+setVariant(id,index).toLowerCase():'');
+      function previousLabel(id){const previous=baselineFor(id);return previous?'Предыдущий '+(id==='abs'?'пресс':type()==='upper'?'верх':'низ')+': '+short(previous.date):'Первое сравнение впереди';}
+      function comparisonContext(){
+        return `<div class="comparison-context"><strong>${comparisonBaseline?`Предыдущий ${type()==='upper'?'верх':'низ'} · ${fmt(comparisonBaseline.date)}`:`Первый ${type()==='upper'?'верх':'низ'} — отправная точка`}</strong><span>${comparisonBaseline?'В карточках — тот же подход прошлой завершённой тренировки этого типа.':'До этой даты нет завершённой тренировки этого типа.'} ${absComparisonBaseline?`Пресс сравниваем отдельно с ${fmt(absComparisonBaseline.date)}, независимо от верха или низа.`:'Для пресса предыдущей завершённой тренировки пока нет.'}</span></div>`;
+      }
+      function comparisonDifference(result){
+        if(result.state!=='matched')return '';
+        const names={reps:'Повторения',left:'Левая',right:'Правая',weight:'Вес'},parts=[];
+        for(const [key,value] of Object.entries(result.deltas)){
+          if(value===null)continue;
+          const text=(value>0?'+':'')+numberText(value)+(key==='weight'?' кг':'');
+          parts.push(`<span class="set-delta ${key==='weight'?'load':value>0?'up':value<0?'down':'same'}">${names[key]}: <b>${text}</b></span>`);
+        }
+        return parts.length?`<div class="delta-values">${parts.join('')}</div>${result.load==='changed'?'<div class="comparison-load-note">Вес изменился. Сравнивай повторения с учётом нагрузки.</div>':''}`:'<span class="comparison-pending">Запиши результат для сравнения.</span>';
+      }
+      function setComparison(id,index,current){
+        const previous=baselineFor(id);if(!previous)return '';
+        const r=W.compareSet(previous,id,index,current),e=previous.exercises[id];
+        if(r.state!=='matched')return `<div class="previous-set new-set"><div class="previous-set-date">${short(r.date)} · прошлый раз</div><div class="comparison-pending">${r.state==='new-set'?`Этот подход новый.${e?' В прошлый раз: '+e.target+' подх.':''}`:'Тогда этот подход не записан.'}</div></div>`;
+        const old=r.previous,weight=old.weight===null||old.weight===undefined?'<span class="previous-weight-missing">Вес не указан</span>':`<span>${numberText(old.weight)} кг</span>`;
+        const reps=T.exercises[id].sides?`<span>Л: <b>${numberText(old.left)}</b> · П: <b>${numberText(old.right)}</b> повт.</span>`:`<span><b>${numberText(old.reps)}</b> повт.</span>`;
+        return `<div class="previous-set" aria-label="Результат прошлого подхода ${index+1}, ${escape(T.exercises[id].name)}"><div class="previous-set-date">${short(r.date)} · прошлый раз · подход ${index+1}</div><div class="previous-set-values">${reps}${weight}</div><div class="set-comparison-difference" id="comparison-delta-${id}-${index}">${comparisonDifference(r)}</div></div>`;
+      }
+      function updateSetComparison(id,index,current){
+        const node=$('comparison-delta-'+id+'-'+index);
+        if(node)node.innerHTML=comparisonDifference(W.compareSet(baselineFor(id),id,index,current));
+      }
+      function focusCard(s){
+        const next=W.nextSet(s),key=coachKey();
+        if(!next)return `<article class="focus-card done" id="focus-panel"><div class="eyebrow">${s.completed?'Тренировка в истории':'План записан полностью'}</div><h3>${s.completed?'Сегодня ты сделал дело.':'Все подходы записаны.'}</h3><p>${s.completed?'Твой результат уже в графике и личных рекордах.':'Осталось завершить тренировку и забрать награду.'}</p>${s.completed?'':'<button class="primary" id="focus-finish">Завершить тренировку</button>'}<button class="ghost" data-focus="false">Посмотреть все подходы</button></article>`;
+        const def=T.exercises[next.id],e=s.exercises[next.id],draftKey=key+':'+next.id+':'+next.index;
+        const values=focusDraft?.key===draftKey?focusDraft.values:e.sets[next.index];
+        return `<article class="focus-card" id="focus-panel" data-current-exercise="${next.id}" data-current-set="${next.index}"><div class="focus-top"><div><div class="eyebrow">Сейчас твой следующий шаг</div><div class="date-text">Упражнение ${next.exerciseIndex+1} из ${T.order[s.type].length} · подход ${next.index+1} из ${e.target}</div></div><div class="focus-step-number">${T.stats(s).filled+1}<small> / ${next.total}</small></div></div><h3>${setName(next.id,next.index)}</h3><p>${def.note}</p>${setComparison(next.id,next.index,values)}<div class="fields">${def.sides?trainingField(next.id,next.index,'left',values.left,'Левая нога')+trainingField(next.id,next.index,'right',values.right,'Правая нога'):trainingField(next.id,next.index,'reps',values.reps,'Повторения')}</div>${field(next.id,next.index,'weight',values.weight,'Вес, кг — необязательно')}<button class="primary" id="focus-commit">${T.stats(s).filled+1===next.total?'Записать последний подход':'Подход выполнен — записать'}</button><div class="focus-rest-copy" id="focus-rest-copy">Результат сохранится после нажатия кнопки.</div><div class="focus-hint">${T.stats(s).filled+1===next.total?'После записи можно завершить тренировку и забрать награду.':'После записи откроется следующий подход с его прошлым результатом.'}</div></article>`;
+      }
+      function trainingActive(){return view==='workout'&&type()!=='rest'&&focusMode();}
+      function trainingField(id,index,key,value,text){
+        const name=key==='left'?'левой ноги':key==='right'?'правой ноги':'подхода';
+        return `<div class="training-field">${field(id,index,key,value,text)}<div class="rep-adjust"><button type="button" data-adjust-field="${key}" data-adjust="-1" aria-label="Уменьшить повторения ${name}">−</button><span>по одному повторению</span><button type="button" data-adjust-field="${key}" data-adjust="1" aria-label="Увеличить повторения ${name}">+</button></div></div>`;
+      }
+      function trainingPlan(s){
+        const next=W.nextSet(s);
+        return `<details class="training-plan" open><summary>План тренировки <span>${T.order[s.type].length} упражнений</span></summary><ol>${T.order[s.type].map((id,index)=>{const e=s.exercises[id],filled=e.sets.filter(set=>T.filledSet(id,set)).length,done=filled===e.target,current=next?.id===id;return `<li class="${done?'done':current?'current':''}" ${current?'aria-current="step"':''}><span class="plan-number" aria-hidden="true">${done?'✓':String(index+1).padStart(2,'0')}</span><div><strong>${T.exercises[id].name}</strong><span>${done?'Выполнено':current?'Сейчас':'Впереди'} · ${filled} / ${e.target} подходов</span></div></li>`;}).join('')}</ol></details>`;
+      }
+      function workoutReceipt(s,focus=false){
+        const count=T.stats(s),next=W.nextPlanned(data,s.date,today),profile=G.summarize(data,today);
+        return `<section class="workout-receipt" ${focus?'id="focus-panel"':''} aria-label="Итоги завершённой тренировки"><div class="receipt-top"><div><div class="eyebrow">${fmt(s.date)} · ${label(s.type)}</div><h3>Тренировка завершена ✓</h3></div><span class="receipt-xp">+100 XP<small>за эту тренировку</small></span></div><div class="receipt-facts"><span><b>${count.filled} / ${count.total}</b>Подходы записаны</span><span><b>${T.order[s.type].length}</b>Упражнений выполнено</span><span><b>${profile.workouts}</b>Тренировок в журнале</span></div><p>${next?`Следующая по плану — <strong>${fmt(next.date,{weekday:'long',day:'numeric',month:'long'})}, ${label(next.type).toLowerCase()}</strong>.`:'Все доступные даты плана завершены.'}</p><div class="receipt-actions">${next?`<button type="button" class="primary" data-date="${next.date}">Открыть следующую тренировку ↗</button>`:''}<button type="button" class="ghost" id="receipt-backup">Скачать копию журнала</button></div><div class="receipt-copy">В копию входят тренировки, привычки, цели и самочувствие. Сохрани JSON-файл для восстановления.</div></section>`;
+      }
+      function renderTraining(s){
+        $('main').innerHTML=`<div class="training-toolbar"><button class="ghost" type="button" data-focus="false">← Все подходы</button><span id="training-save-status" role="status"></span></div><div class="training-heading"><div><div class="eyebrow">${label(s.type)} · ${fmt(selected)}${selected===today?' · сегодня':''}</div><h2>Режим тренировки</h2></div><span class="training-mode-tag">Один подход за другим</span></div><div class="training-progress"><div class="training-count" id="progress-value"></div><div class="training-progress-track"><div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div><p id="progress-copy"></p></div></div><div class="training-layout"><div class="training-main">${s.completed?workoutReceipt(s,true):focusCard(s)}${s.completed?wellnessEditor(selected):''}</div><aside class="training-aside"><section class="training-rest-card" id="training-rest-card" aria-label="Отдых между подходами"><div class="training-rest-heading"><span>Отдых между подходами</span><span class="rest-indicator" id="training-rest-state"></span></div><output id="training-rest-clock" role="timer" aria-label="Осталось отдыха">—:—</output><p id="training-rest-copy"></p><div class="training-rest-actions"><button type="button" class="ghost" id="training-rest-pause" hidden>Пауза</button><button type="button" class="ghost" id="training-rest-skip" hidden>Пропустить</button><button type="button" class="ghost" id="training-start-rest">Запустить отдых</button></div><label class="rest-setting">Длительность <input id="rest-seconds" type="number" inputmode="numeric" min="5" max="600" step="1" value="${restSeconds()}" aria-label="Длительность отдыха, секунды"> сек.</label></section>${trainingPlan(s)}</aside></div>`;
+        updateWorkout();renderRest();
+      }
+      function startRest(key=coachKey()){
+        data={...data,restTimer:W.timerTransition(data.restTimer,'start',{key,seconds:restSeconds()})};
+        save();renderRest();
+      }
+      function renderRest(){
+        const timer=data.restTimer||{},shown=(timer.status==='running'||timer.status==='paused')&&!trainingActive(),dock=$('rest-dock');
+        dock.hidden=!shown;document.body.classList.toggle('has-rest-timer',shown);
+        if(!shown)dock.innerHTML='';
+        if(shown){const [date,t]=timer.sessionKey.split(':');dock.innerHTML=`<div class="rest-time" role="timer" aria-label="Осталось отдыха" id="rest-clock"></div><div class="rest-info"><strong id="rest-status"></strong><span>${short(date)} · ${label(t)}</span></div><div class="rest-actions"><button class="ghost" id="rest-pause">Пауза</button><button class="ghost" id="rest-skip">Пропустить</button><button class="ghost" id="rest-return">К подходу ↗</button></div>`;}
+        tickRest();
+      }
+      function tickRest(){
+        const timer=data.restTimer||{},left=W.timerRemaining(timer),clock=$('rest-clock'),same=timer.sessionKey===coachKey(),waiting=same&&left>0;
+        if(clock){clock.textContent=String(Math.floor(left/60)).padStart(2,'0')+':'+String(left%60).padStart(2,'0');$('rest-dock').classList.toggle('ready',left===0);const text=left===0?'Отдых завершён':timer.status==='paused'?'Отдых на паузе':'Время восстановиться';if($('rest-status').textContent!==text)$('rest-status').textContent=text;$('rest-pause').textContent=timer.status==='paused'?'Продолжить':'Пауза';$('rest-pause').disabled=left===0;}
+        if($('focus-commit'))$('focus-commit').disabled=waiting;
+        if($('focus-rest-copy'))$('focus-rest-copy').textContent=waiting?`Отдых ${Math.floor(left/60)}:${String(left%60).padStart(2,'0')}${timer.status==='paused'?' · на паузе':''}. Можно ввести результат или пропустить отдых.`:same&&timer.status==='running'?'Отдых завершён. Можно делать следующий подход.':'Результат сохранится после нажатия кнопки.';
+        document.body.classList.toggle('training-waiting',trainingActive()&&waiting);
+        if($('training-rest-clock')){
+          const active=same&&(timer.status==='running'||timer.status==='paused'),done=session().completed,panel=$('training-rest-card');
+          $('training-rest-clock').textContent=active?String(Math.floor(left/60)).padStart(2,'0')+':'+String(left%60).padStart(2,'0'):'—:—';
+          $('training-rest-state').textContent=done?'Финиш':waiting?(timer.status==='paused'?'Пауза':'Идёт отдых'):active?'Можно начинать':'Готов';
+          $('training-rest-copy').textContent=done?'Все подходы записаны. Тренировка завершена.':waiting?(timer.status==='paused'?'Отдых на паузе. Продолжи таймер, когда будешь готов.':'Следующий подход уже открыт. Отдохни, затем продолжай.'):active?'Отдых завершён. Можно выполнять следующий подход.':'Таймер запустится после записи подхода. Можно запустить его вручную.';
+          panel.classList.toggle('resting',waiting);panel.classList.toggle('paused',waiting&&timer.status==='paused');panel.classList.toggle('ready',active&&left===0);
+          $('training-rest-pause').hidden=!waiting;$('training-rest-pause').textContent=timer.status==='paused'?'Продолжить':'Пауза';$('training-rest-skip').hidden=!active;$('training-rest-skip').textContent=waiting?'Пропустить отдых':'К подходу';$('training-start-rest').hidden=waiting;$('training-start-rest').disabled=done;
+          const panelDraft=$('focus-panel'),draft=focusDraft?.key===coachKey()+':'+panelDraft?.dataset.currentExercise+':'+panelDraft?.dataset.currentSet&&Object.values(focusDraft.values).some(v=>v!==null),error=$('save-status').classList.contains('error'),savedText=$('save-status').textContent;
+          $('training-save-status').textContent=error?savedText:draft?'Подход ещё не записан':savedText==='Записи сохраняются автоматически'?'Записи загружены из браузера':savedText;$('training-save-status').classList.toggle('error',error);
+        }
+        if(timer.status==='running'&&left===0&&timerNotice!==timer.endsAt&&(!trainingActive()||same)){timerNotice=timer.endsAt;toast('Отдых завершён — следующий подход готов.');}
+      }
+      function renderBackup(){
+        const state=W.backupStatus(data),panel=$('backup-notice');if(!panel)return;
+        panel.hidden=!state.due;
+        if(state.due)panel.innerHTML=`<div class="backup-copy"><strong>${state.exportedAt?'Пора обновить резервную копию':'Сохрани первую резервную копию'}</strong><p>Есть новые записи. Скачай JSON-файл, чтобы сохранить весь журнал и перенести его на другое устройство.</p></div><div class="backup-actions"><button class="ghost backup-download" id="backup-download">Скачать копию</button><button class="ghost" id="backup-snooze">Напомнить завтра</button></div>`;
+      }
+      function exportBackup(){
+        data=W.prepareBackup(data);save();
+        const blob=new Blob([JSON.stringify({...data,exportedAt:new Date().toISOString()},null,2)],{type:'application/json'}),url=URL.createObjectURL(blob),a=document.createElement('a');
+        a.href=url;a.download='svoi-temp-'+today+'.json';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),2000);renderBackup();toast('Копия подготовлена. Проверь, что JSON-файл сохранился.');
+      }
+      function chartSvg(points,unit){
+        if(!points.length)return '<div class="chart-empty">Пока нет результатов за этот период.<br>Запиши подход — здесь появится первая точка.</div>';
+        const width=Math.max(260,Math.min(720,window.innerWidth-60)),height=280,left=47,right=20,top=20,bottom=45,max=Math.max(1,...points.map(p=>p.value)),ceiling=Math.ceil(max*1.15*10)/10;
+        const first=T.parseDate(points[0].date).getTime(),last=T.parseDate(points[points.length-1].date).getTime();
+        const coords=points.map(p=>({x:first===last?width/2:left+(T.parseDate(p.date).getTime()-first)/(last-first)*(width-left-right),y:top+(1-p.value/ceiling)*(height-top-bottom),...p}));
+        const line=coords.map(p=>`${p.x.toFixed(1)},${p.y.toFixed(1)}`).join(' '),base=height-bottom;
+        const ticks=Array.from({length:5},(_,i)=>{const value=ceiling*i/4,y=top+(1-i/4)*(height-top-bottom);return `<line x1="${left}" x2="${width-right}" y1="${y}" y2="${y}" stroke="#344032" stroke-dasharray="3 6"/><text x="${left-10}" y="${y+4}" text-anchor="end" fill="#9aab91" font-size="11">${Number(value.toFixed(1))}</text>`;}).join('');
+        const labelIndices=[...new Set([0,Math.floor((coords.length-1)/2),coords.length-1])];
+        return `<svg viewBox="0 0 ${width} ${height}" role="img" aria-label="График прогресса: ${escape(W.statDefinition(chartExercise).name)}, ${points.length} дат, ${unit}"><defs><linearGradient id="progress-area" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#b8df6c" stop-opacity=".22"/><stop offset="100%" stop-color="#b8df6c" stop-opacity="0"/></linearGradient></defs>${ticks}${coords.length>1?`<polygon points="${coords[0].x},${base} ${line} ${coords[coords.length-1].x},${base}" fill="url(#progress-area)"/><polyline points="${line}" fill="none" stroke="#b8df6c" stroke-width="3" stroke-linejoin="round"/>`:''}${coords.map(p=>`<circle cx="${p.x}" cy="${p.y}" r="4" fill="#ff713c" stroke="#171a1b" stroke-width="2"><title>${short(p.date)}: ${p.value} ${unit}</title></circle>`).join('')}${labelIndices.map(i=>`<text x="${coords[i].x}" y="${height-14}" text-anchor="middle" fill="#9aab91" font-size="11">${short(coords[i].date)}</text>`).join('')}</svg>`;
+      }
+      function renderProgress(){
+        const def=W.statDefinition(chartExercise),from=chartRange==='all'?'0001-01-01':T.addDays(today,-Number(chartRange)+1),points=W.series(data,def.id,chartMetric,from,today,def.variant),unit=chartMetric==='weight'?'кг':'повт.';
+        const first=points[0]?.value,last=points[points.length-1]?.value,delta=last===undefined?null:last-first;
+        $('main').innerHTML=`<div class="panel-heading"><div><div class="date-text">Каждый подход оставляет след</div><h2>График прогресса</h2><p>Лучший подход за каждую дату. Линия показывает изменения и может идти вниз.</p></div></div><section class="chart-card"><div class="chart-controls"><label class="coach-label">Упражнение<select id="chart-exercise" aria-label="Упражнение для графика">${W.statChoices().map(def=>`<option value="${def.key}" ${def.key===chartExercise?'selected':''}>${def.name}</option>`).join('')}</select></label><label class="coach-label">Показатель<select id="chart-metric" aria-label="Показатель графика"><option value="reps" ${chartMetric==='reps'?'selected':''}>Повторения</option><option value="weight" ${chartMetric==='weight'?'selected':''}>Вес, кг</option></select></label><label class="coach-label">Период<select id="chart-range" aria-label="Период графика">${[['30','30 дней'],['90','90 дней'],['all','Всё время']].map(([v,text])=>`<option value="${v}" ${chartRange===v?'selected':''}>${text}</option>`).join('')}</select></label></div><div class="chart-summary"><span><b>${last===undefined?'—':last+' '+unit}</b>Лучший подход последней даты</span><span><b>${delta===null?'—':(delta>0?'+':'')+Number(delta.toFixed(2))+' '+unit}</b>Разница между первой и последней датой</span><span><b>${points.length}</b>Дней с записями</span></div><figure class="chart-frame">${chartSvg(points,unit)}<figcaption class="chart-caption">Каждая точка — лучший результат за дату среди подходов с записанными повторениями.${def.sides?' Для выпадов используется меньшее число повторений из двух ног.':''} ${chartMetric==='weight'?'Подходы без указанного веса пропущены. Вес и повторения могут относиться к разным подходам.':'Результаты включают тренировки в процессе.'} ${def.id==='abs'?(def.variant==='all'?'Сводный график включает пресс лёжа и на турнике.':def.variant==='floor'?'Учтён первый подход — лёжа.':'Учтены подходы на турнике, начиная со второго.'):''} Рекорды показывают наибольший результат за всё время.${points.length===1?' Пока есть одна дата, значения графика и рекорда могут совпадать. Следующие тренировки покажут динамику.':''}</figcaption></figure>${points.length?`<details class="chart-table"><summary>Посмотреть данные таблицей</summary><div class="chart-table-scroll"><table><thead><tr><th scope="col">Дата</th><th scope="col">Лучший результат, ${unit}</th></tr></thead><tbody>${[...points].reverse().map(p=>`<tr><td>${fmt(p.date,{day:'numeric',month:'long',year:'numeric'})}</td><td>${p.value}</td></tr>`).join('')}</tbody></table></div></details>`:''}</section>`;
+      }
+      const monthEnd=()=>{const d=T.parseDate(today);d.setUTCMonth(d.getUTCMonth()+1,1);return T.addDays(d.toISOString().slice(0,10),-1);};
+      function goalTitle(g){return g.kind==='workouts'?'Тренировки за период':g.kind==='mornings'?'Утренняя зарядка':W.statDefinition(W.goalExerciseKey(g)).name;}
+      function goalUnit(g,n=g.target){const forms=g.kind==='workouts'?['тренировка','тренировки','тренировок']:['зарядка','зарядки','зарядок'],ten=n%10,hundred=n%100;return g.kind==='exercise'?(g.metric==='weight'?'кг':'повт.'):forms[ten===1&&hundred!==11?0:ten>=2&&ten<=4&&(hundred<12||hundred>14)?1:2];}
+      function goalCardsHtml(){
+        const goals=Object.values(data.goals||{}).filter(g=>!g.deleted).sort((a,b)=>b.updatedAt-a.updatedAt);
+        return goals.length?goals.map(goal=>{const p=W.goalProgress(data,goal,today),unit=goalUnit(goal);return `<article class="personal-goal ${p.reached?'reached':''}"><div class="goal-title-row"><div><div class="eyebrow">${goal.kind==='exercise'?'Результат в подходе':'Личный план'}</div><h3>${escape(goalTitle(goal))}</h3></div>${p.reached?medal({id:'personal',title:'Личная цель достигнута',icon:'star'}):''}</div><p>${short(goal.startDate)} — ${fmt(goal.endDate,{day:'numeric',month:'short',year:'numeric'})}${goal.kind==='exercise'&&T.exercises[goal.exerciseId].sides&&goal.metric==='reps'?' · по более слабой ноге':''}</p><div class="goal-value">${p.value}<small> / ${goal.target} ${unit}</small></div><div class="badge-track" role="progressbar" aria-label="Прогресс цели ${escape(goalTitle(goal))}" aria-valuemin="0" aria-valuemax="${goal.target}" aria-valuenow="${Math.min(p.value,goal.target)}"><div class="badge-fill" style="width:${p.percent}%"></div></div><div class="goal-state">${p.reached?'Цель достигнута · твоя золотая медаль ✓':p.expired?'Период закончился · можно изменить цель':p.pending?'Период ещё не начался':'До цели: '+Number((goal.target-p.value).toFixed(2))+' '+goalUnit(goal,goal.target-p.value)}</div><div class="goal-buttons"><button class="ghost" type="button" data-edit-goal="${goal.id}">Изменить</button><button class="ghost" type="button" data-cancel-goal="${goal.id}">Отменить цель</button></div></article>`;}).join(''):'<div class="goal-empty">Добавь первый ориентир.<br>Например, 10 подтягиваний или 12 тренировок за месяц.</div>';
+      }
+      function renderGoals(){
+        const editing=data.goals?.[editingGoalId];
+        const g=editing||{kind:'exercise',exerciseId:'pullups',metric:'reps',target:10,startDate:today,endDate:monthEnd()};
+        $('main').innerHTML=`<div class="panel-heading"><div><div class="date-text">Твой следующий ориентир</div><h2>Личные цели</h2><p>Выбери результат и период. Прогресс обновится по твоим записям.</p></div></div><div class="goals-layout"><form class="goal-editor" id="goal-form"><h3>${editing?'Изменить цель':'Новая цель'}</h3><label class="coach-label">Что считаем<select id="goal-kind" aria-label="Тип личной цели"><option value="exercise" ${g.kind==='exercise'?'selected':''}>Результат в упражнении</option><option value="workouts" ${g.kind==='workouts'?'selected':''}>Количество тренировок</option><option value="mornings" ${g.kind==='mornings'?'selected':''}>Количество зарядок</option></select></label><div id="goal-exercise-options" ${g.kind==='exercise'?'':'hidden'}><label class="coach-label">Упражнение<select id="goal-exercise" aria-label="Упражнение личной цели">${W.statChoices().map(def=>`<option value="${def.key}" ${def.key===W.goalExerciseKey(g)?'selected':''}>${def.name}</option>`).join('')}</select></label><label class="coach-label">Показатель<select id="goal-metric" aria-label="Показатель личной цели"><option value="reps" ${g.metric!=='weight'?'selected':''}>Повторения в одном подходе</option><option value="weight" ${g.metric==='weight'?'selected':''}>Вес в записанном подходе, кг</option></select></label></div><label class="coach-label" id="goal-target-label">Целевое значение<input type="number" inputmode="decimal" id="goal-target" aria-label="Целевое значение" min="1" max="9999" step="1" required value="${g.target}"></label><div class="goal-dates"><label class="coach-label">Начало<input type="date" id="goal-start" aria-label="Начало периода цели" required value="${g.startDate}"></label><label class="coach-label">До даты<input type="date" id="goal-end" aria-label="Конец периода цели" required value="${g.endDate}"></label></div><p class="chart-caption" id="goal-definition"></p><button class="primary" id="save-goal" type="button">${editing?'Сохранить изменения':'Добавить цель'}</button>${editing?'<button class="ghost" type="button" id="cancel-goal-edit">Не менять цель</button>':''}</form><div class="goal-list">${goalCardsHtml()}</div></div>`;
+        updateGoalFields();goalFormBaseline={editingGoalId,values:goalFieldValues()};
+      }
+      function updateGoalFields(){
+        if(!$('goal-kind'))return;const kind=$('goal-kind').value,weight=kind==='exercise'&&$('goal-metric').value==='weight';
+        $('goal-exercise-options').hidden=kind!=='exercise';$('goal-target').min=weight?'0.1':'1';$('goal-target').max=weight?'1000':'9999';$('goal-target').step=weight?'any':'1';
+        $('goal-definition').textContent=kind==='exercise'?'Считается лучший подход выбранного упражнения в периоде. Пресс лёжа и на турнике учитываются отдельно; сводная цель — по всем подходам. Для выпадов — по более слабой ноге.':kind==='workouts'?'Считаются только завершённые тренировки в этом периоде.':'Считаются даты с полностью выполненной зарядкой.';
+      }
+      function finishWorkout(){
+        const s=session(),count=T.stats(s);if(!s||s.completed||count.filled!==count.total||invalidInputs())return;
+        const before=G.summarize(data,today);s.completed=true;s.updatedAt=Math.max(Date.now(),s.updatedAt+1);data.sessions[coachKey()]=s;
+        if(data.restTimer?.sessionKey===coachKey())data={...data,restTimer:W.timerTransition(data.restTimer,'skip')};
+        const saved=save();render();showReward(before,saved);if(!saved)toast('Тренировка завершена в памяти. Скачай копию записей.');
+      }
+      function handleCoachClick(b,event){
+        try{
+          if(b.dataset.focus!==undefined){const enter=b.dataset.focus==='true';if(enter&&!focusMode()&&invalidInputs()){toast('Исправь выделенные поля перед переходом в режим тренировки');return true;}view='workout';data=W.setSettings(data,{focus:enter});save();render();if(enter)window.scrollTo(0,0);else $('main')?.scrollIntoView({block:'start'});return true;}
+          if(b.dataset.adjustField){const input=$('focus-panel').querySelector('[data-field="'+b.dataset.adjustField+'"]'),value=W.stepReps(input.value===''?null:Number(input.value),Number(b.dataset.adjust));input.value=value===null?'':String(value);input.dispatchEvent(new Event('input',{bubbles:true}));input.focus({preventScroll:true});return true;}
+          if(b.id==='focus-commit'){
+            const panel=$('focus-panel'),id=panel.dataset.currentExercise,index=Number(panel.dataset.currentSet),values={};
+            for(const input of panel.querySelectorAll('[data-field]')){if(!input.reportValidity())return true;values[input.dataset.field]=input.value===''?null:Number(input.value);}
+            if(data.restTimer?.sessionKey===coachKey()&&W.timerRemaining(data.restTimer)>0)return true;
+            data=W.commitSet(data,coachKey(),id,index,values);focusDraft=null;
+            if(W.nextSet(session()))data={...data,restTimer:W.timerTransition(data.restTimer,'start',{key:coachKey(),seconds:restSeconds()})};
+            else if(data.restTimer?.sessionKey===coachKey())data={...data,restTimer:W.timerTransition(data.restTimer,'skip')};
+            const saved=save();render();if(trainingActive())window.scrollTo(0,0);if(!saved)toast('Подход записан в памяти. Скачай резервную копию.');return true;
+          }
+          if(b.id==='focus-finish'){finishWorkout();return true;}
+          if(b.id==='start-rest'||b.id==='training-start-rest'){startRest();return true;}
+          if(['rest-pause','rest-skip','training-rest-pause','training-rest-skip'].includes(b.id)){
+            const action=b.id.endsWith('rest-skip')?'skip':data.restTimer.status==='paused'?'resume':'pause';data={...data,restTimer:W.timerTransition(data.restTimer,action)};save();renderRest();if(b.id==='training-rest-skip')$('focus-panel')?.scrollIntoView({block:'start'});return true;
+          }
+          if(b.id==='rest-return'){
+            const [d,t]=data.restTimer.sessionKey.split(':');if(W.timerRemaining(data.restTimer)===0)data={...data,restTimer:W.timerTransition(data.restTimer,'skip')};
+            selected=d;override=t;view='workout';data=W.setSettings(data,{focus:true});save();render();$('focus-panel')?.scrollIntoView({behavior:'smooth',block:'start'});return true;
+          }
+          if(b.id==='backup-download'||b.id==='receipt-backup'){exportBackup();return true;}
+          if(b.id==='backup-snooze'){data=W.snoozeBackup(data);save();renderBackup();return true;}
+          if(b.dataset.saveWellness){
+            const panel=b.closest('.wellness-card'),rating=panel.querySelector('input:checked'),note=panel.querySelector('textarea').value,date=b.dataset.saveWellness;
+            data=W.setWellness(data,date,rating?Number(rating.value):null,note);const saved=save();
+            for(const other of document.querySelectorAll(`.wellness-card[data-wellness-date="${date}"]`)){
+              for(const input of other.querySelectorAll('input[type="radio"]'))input.checked=Number(input.value)===data.wellness[date].rating;
+              other.querySelector('textarea').value=note;other.querySelector('.wellness-save-status').textContent=saved?'Самочувствие сохранено':'В памяти — скачай копию';
+            }
+            renderBackup();toast(saved?'Самочувствие записано.':'Запись в памяти. Скачай копию.');return true;
+          }
+          if(b.id==='save-goal'){
+            const form=$('goal-form');if(!form.reportValidity())return true;
+            const kind=$('goal-kind').value,stat=kind==='exercise'?W.statDefinition($('goal-exercise').value):null,id=editingGoalId||'g-'+(globalThis.crypto?.randomUUID?.()||Date.now().toString(36)+'-'+Math.random().toString(36).slice(2));
+            data=W.saveGoal(data,{id,kind,exerciseId:stat?.id||'',...(stat?.id==='abs'?{variant:stat.variant}:{}),metric:kind==='exercise'?$('goal-metric').value:'',target:Number($('goal-target').value),startDate:$('goal-start').value,endDate:$('goal-end').value});
+            const saved=save();editingGoalId=null;render();toast(saved?'Цель сохранена.':'Цель в памяти. Скачай копию.');return true;
+          }
+          if(b.dataset.editGoal){editingGoalId=b.dataset.editGoal;renderGoals();$('goal-form').scrollIntoView({behavior:'smooth',block:'start'});return true;}
+          if(b.dataset.cancelGoal){data=W.cancelGoal(data,b.dataset.cancelGoal);if(editingGoalId===b.dataset.cancelGoal)editingGoalId=null;save();render();return true;}
+          if(b.id==='cancel-goal-edit'){editingGoalId=null;renderGoals();return true;}
+        }catch(error){toast(error.message);return true;}
+        return false;
+      }
+      function handleCoachChange(input){
+        try{
+          const wellness=input.closest?.('.wellness-card');if(wellness){wellness.querySelector('.wellness-save-status').textContent='Изменения не сохранены';return true;}
+          if(input.dataset.morningStep!==undefined){
+            const date=input.dataset.habitDate,before=G.summarize(data,today),wasDone=H.state(data,date).morning;
+            const drafts=captureUiDrafts();data=H.step(data,date,Number(input.dataset.morningStep),input.checked);const saved=save();render(drafts);
+            if(!wasDone&&H.state(data,date).morning)showReward(before,saved,'morning');return true;
+          }
+          if(input.id==='rest-seconds'){if(!input.reportValidity())return true;data=W.setSettings(data,{restSeconds:Number(input.value)});save();return true;}
+          if(['chart-exercise','chart-metric','chart-range'].includes(input.id)){
+            if(input.id==='chart-exercise')chartExercise=input.value;if(input.id==='chart-metric')chartMetric=input.value;if(input.id==='chart-range')chartRange=input.value;renderProgress();return true;
+          }
+          if(['goal-kind','goal-metric','goal-exercise'].includes(input.id)){updateGoalFields();return true;}
+        }catch(error){toast(error.message);return true;}
+        return false;
+      }
+
+      function renderWeek(){
+        const days=T.weekDates(selected);$('week-title').textContent=short(days[0])+' — '+short(days[6])+' '+fmt(days[6],{year:'numeric'}).replace(/\s*г\.?$/,'');$('date-picker').value=selected;
+        $('days').innerHTML=days.map((d,i)=>{const planned=T.scheduledType(d),done=Object.values(data.sessions).some(s=>s.date===d&&s.completed),current=d===selected;return `<button class="day ${planned==='rest'?'rest':''} ${current?'selected':''}" data-date="${d}" aria-pressed="${current}" aria-label="${escape(fmt(d,{weekday:'long',day:'numeric',month:'long'}))}, ${label(planned)}${done?', тренировка завершена':''}"><div class="day-top"><span>${['ПН','ВТ','СР','ЧТ','ПТ','СБ','ВС'][i]}</span>${done?'<span class="day-done" aria-hidden="true">✓</span>':d===today?'<span class="today-mark" aria-hidden="true"></span>':''}</div><div class="day-number">${Number(d.slice(8))}</div><div class="day-name"><span class="day-long">${planned==='upper'?'Верх тела':planned==='lower'?'Низ тела':'Отдых'}</span><span class="day-short">${planned==='upper'?'Верх':planned==='lower'?'Низ':'Отдых'}</span></div></button>`;}).join('');
+      }
+      function summary(){const weeks=T.weekDates(selected),completed=Object.values(data.sessions).filter(s=>s.completed&&weeks.includes(s.date)).length;const s=session(),count=s?T.stats(s):null,rs=W.statRecords(data),recordCount=Object.values(rs).filter(r=>r.reps||r.left||r.right).length;$('week-stat').innerHTML=`${completed}<small>/ 4</small>`;$('sets-stat').innerHTML=count?`${count.filled}<small>/ ${count.total}</small>`:'—';$('records-stat').innerHTML=`${recordCount}<small>/ ${W.statChoices(false).length}</small>`;$('history-count').textContent=sessions().length;renderGame();renderHabits();renderBackup();}
+      function gameIcon(name){
+        const paths={bolt:'<path d="m13 2-9 12h7l-1 8 10-13h-7l0-7Z"/>',balance:'<path d="M3 5h18M3 19h18M7 5v14m10-14v14M7 12h10"/>',shield:'<path d="m12 2 8 4v6c0 5-8 10-8 10S4 17 4 12V6l8-4Z"/><path d="m8 12 3 3 5-6"/>',flame:'<path d="M13 2c1 5 6 6 6 12a7 7 0 0 1-14 0c0-3 2-6 4-8 0 3 1 4 2 5 2-3 3-5 2-9Z"/><path d="M12 13c3 3 4 6 0 8-4-2-3-5 0-8Z"/>',star:'<path d="m12 2 3 6.5 7 1-5 5 1.3 7L12 18l-6.3 3.5L7 14.5l-5-5 7-1L12 2Z"/>',crown:'<path d="m3 6 5 4 4-7 4 7 5-4-2 12H5L3 6ZM5 21h14"/>' ,sun:'<circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/>',cup:'<path d="M5 9h14l-1 12H6L5 9ZM7 3v3m5-4v4m5-3v3M8 13h8"/>'};
+        return `<svg class="game-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${paths[name]||paths.star}</svg>`;
+      }
+      function xpMeter(profile){return `<div class="xp-track" role="progressbar" aria-label="Опыт текущего уровня" aria-valuemin="0" aria-valuemax="300" aria-valuenow="${profile.levelXp}"><div class="xp-fill" style="width:${profile.levelXp/3}%"></div></div><div class="xp-next">Ещё ${profile.toNextLevel} XP до уровня ${profile.level+1}</div>`;}
+      function renderGame(){
+        const p=G.summarize(data,today),quest=G.challenge(data,selected);
+        $('badge-count').textContent=p.badges.filter(b=>b.unlocked).length;
+        $('game-strip').innerHTML=`<div class="player-card"><div class="level-emblem" aria-label="Уровень ${p.level}"><b>${p.level}</b><span>УРОВЕНЬ</span></div><div class="player-info"><div class="game-eyebrow">Твоя история силы</div><div class="player-name">${p.rank}</div><div class="player-xp">${p.xp.toLocaleString('ru-RU')} XP · завершено тренировок: ${p.workouts}</div>${xpMeter(p)}</div></div><div class="week-quest"><div class="quest-title"><strong>Неделя силы</strong><span class="quest-prize">${quest.done?'Бонус получен ✓':'+200 XP'}</span></div><div class="quest-days">${quest.days.map((day,i)=>`<span class="quest-day ${day.done?'done':''}" aria-label="${['Понедельник','Вторник','Четверг','Пятница'][i]}: ${day.done?'выполнено':'впереди'}">${day.done?'✓ ':''}${['ПН','ВТ','ЧТ','ПТ'][i]}</span>`).join('')}</div><div class="quest-copy">${quest.done?'Четыре дня закрыты. Эта неделя — твоя.':`${quest.count} / 4 дня плана. Закрой все — забери бонус.`}</div></div><div class="streak-card"><div class="streak-icon">${gameIcon('flame')}</div><div><div class="streak-number">${p.streak}</div><div class="streak-copy">Серия по плану</div><div class="streak-help">Отдых сохраняет серию</div></div></div>`;
+      }
+      function renderAchievements(){
+        const p=G.summarize(data,today),earned=p.badges.filter(b=>b.unlocked).length,next=p.badges.find(b=>!b.unlocked);
+        $('main').innerHTML=`<div class="panel-heading"><div><div class="date-text">Твой труд становится наградой</div><h2>Твои медали</h2><p>Получено ${earned} из ${p.badges.length}. У каждой медали — конкретное достижение.</p></div></div><div class="medal-legend"><span><i style="background:#d99155"></i>Бронза · первые шаги</span><span><i style="background:#d9e4e8"></i>Серебро · постоянство</span><span><i style="background:#e7c66d"></i>Золото · большая цель</span></div>${next?`<div class="next-goal">${medal(next,true)}<div class="goal-copy"><div class="game-eyebrow">Следующая медаль</div><h3>${next.title}</h3><p>${next.copy}</p></div><div class="goal-progress">${next.progress} / ${next.goal}<div class="badge-track"><div class="badge-fill" style="width:${next.progress/next.goal*100}%"></div></div></div></div>`:'<div class="next-goal">'+medal({id:'twentyfive',title:'Вся коллекция',icon:'crown'})+'<div class="goal-copy"><div class="game-eyebrow">Коллекция собрана</div><h3>Вся площадка — твоя.</h3><p>Все медали открыты. Продолжай расти в уровнях и личных рекордах.</p></div></div>'}<div class="badge-grid">${p.badges.map(b=>`<article class="badge-card ${b.unlocked?'unlocked':''}"><div class="badge-top">${medal(b,!b.unlocked)}<span class="badge-status">${b.unlocked?'Медаль получена ✓':'Ещё впереди'}</span></div><h3>${b.title}</h3><p>${b.copy}</p><div class="badge-progress">${b.progress} / ${b.goal}<div class="badge-track"><div class="badge-fill" style="width:${b.progress/b.goal*100}%"></div></div></div></article>`).join('')}</div><p class="game-rules"><b>20 XP</b> за утреннюю зарядку, <b>100 XP</b> за завершённую тренировку, <b>200 XP</b> за закрытые Пн, Вт, Чт и Пт одной недели. Каждый уровень — ещё <b>300 XP</b>. Повторное завершение записи не умножает опыт. За выполненные личные цели золотая медаль появляется в разделе «Цели».</p>`;
+      }
+      function renderHabits(){
+        const panel=$('habits-panel'),oldEditor=$('routine-editor'),open=!!oldEditor?.open,draft=open?$('morning-plan')?.value:null;
+        panel.hidden=view!=='workout';
+        const marks=H.state(data,selected),items=marks.items,planItems=data.morningPlan?.items||[],p=G.summarize(data,today),checked=marks.checks.filter(Boolean).length;
+        panel.innerHTML=`<div class="habits-heading"><h2>Два шага для себя</h2><span>${fmt(selected,{day:'numeric',month:'long'})}${selected===today?' · сегодня':''}</span></div><div class="habits-grid"><article class="habit-card ${marks.morning?'done':''}"><div class="habit-top"><div class="habit-icon">${gameIcon('sun')}</div><div><h3>Утренняя зарядка</h3><div class="habit-time">Каждое утро · твой комплекс</div></div></div>${items.length?`<ol class="routine-steps">${items.map((item,i)=>`<li class="${marks.checks[i]?'step-done':''}"><label><input type="checkbox" data-morning-step="${i}" data-habit-date="${selected}" aria-label="Зарядка, шаг ${i+1}: ${escape(item)}" ${marks.checks[i]?'checked':''}><span>${i+1}. ${escape(item)}</span></label></li>`).join('')}</ol><div class="routine-progress">${checked} / ${items.length} шагов${!marks.morning?' · дальше: '+escape(items[marks.checks.findIndex(done=>!done)]):' · комплекс выполнен ✓'}</div>`:'<p>Добавь свой комплекс, чтобы отмечать упражнения по шагам.</p>'}<label class="habit-action"><input type="checkbox" id="habit-morning" data-habit="morning" data-habit-date="${selected}" aria-label="Утренняя зарядка выполнена" ${marks.morning?'checked':''}><strong>${marks.morning?'Зарядка выполнена ✓':items.length?'Отметить весь комплекс':'Сделал утреннюю зарядку'}</strong></label><div class="habit-meta">+20 XP за весь комплекс · выполнено зарядок: ${p.mornings}</div>${JSON.stringify(items)!==JSON.stringify(planItems)?'<div class="routine-snapshot">Здесь комплекс, с которым начат этот день. Новый список появится в ещё не начатых днях.</div>':''}<details class="routine-editor" id="routine-editor" ${open?'open':''}><summary>${planItems.length?'Изменить мой комплекс':'Добавить мой комплекс'}</summary><label for="morning-plan">Мои упражнения — каждое с новой строки</label><textarea id="morning-plan" rows="3" placeholder="Впиши свой список упражнений">${escape(planItems.join('\n'))}</textarea><button class="ghost" id="save-morning-plan">Сохранить комплекс</button><div class="habit-meta">Изменения списка применяются к ещё не начатым дням.</div></details></article><article class="habit-card ${marks.creatine?'done':''}"><div class="habit-top"><div class="habit-icon">${gameIcon('cup')}</div><div><h3>Креатин после тренировки</h3><div class="habit-time">После финиша · одна отметка на дату</div></div></div><p>${marks.creatine?'Приём уже отмечен за выбранную дату.':marks.canCreatine?'Тренировка завершена. После приёма креатина поставь отметку.':'Отметка станет доступна после завершения тренировки за эту дату.'}</p><label class="habit-action ${marks.canCreatine?'':'unavailable'}"><input type="checkbox" id="habit-creatine" data-habit="creatine" data-habit-date="${selected}" aria-label="Креатин принят" ${marks.creatine?'checked':''} ${marks.canCreatine?'':'disabled'}><strong>${marks.creatine?'Креатин принят ✓':'Принял креатин'}</strong></label><div class="habit-meta">${marks.creatine?'Приём отмечен':marks.canCreatine?'Можно отметить приём':'Сначала заверши тренировку'}</div></article></div>`;
+        if(open&&draft!==undefined&&draft!==null)$('morning-plan').value=draft;
+      }
+      function creatineReminder(date){
+        const marks=H.state(data,date);
+        return `<div class="post-workout-reminder"><div class="post-reminder-title">${gameIcon('cup')} После тренировки</div><p id="post-reminder-copy">${marks.creatine?'Креатин уже отмечен за эту дату.':'Не забудь отметить приём креатина после тренировки.'}</p><label class="habit-action"><input type="checkbox" id="reward-creatine" data-habit="creatine" data-habit-date="${date}" aria-label="Креатин принят после этой тренировки" ${marks.creatine?'checked':''}><strong>Принял креатин</strong></label></div>`;
+      }
+      function showReward(before,saved,source='workout'){
+        const p=G.summarize(data,today),reward=G.reward(before,p),morning=source==='morning';
+        $('reward-content').innerHTML=`<div class="reward-particles" aria-hidden="true">${Array.from({length:14},(_,i)=>`<span class="reward-particle" style="--x:${5+i*7}%;--delay:${i%5*.08}s"></span>`).join('')}</div><button class="reward-close" data-dismiss-reward="true" aria-label="Закрыть награду">×</button><div class="reward-symbol">${gameIcon(reward.levelUp?'star':morning?'sun':'shield')}</div><div class="reward-kicker">${reward.levelUp?'Ты стал на шаг сильнее':morning?'Утро началось с движения':'Сегодня ты сделал дело'}</div><h2 id="reward-title">${reward.levelUp?'Новый уровень!':morning?'Зарядка выполнена!':'Тренировка закрыта!'}</h2><div class="reward-xp">+${reward.xp} <small>XP</small></div><div class="reward-breakdown">${morning?`Утренняя зарядка: +${reward.morningXp} XP`:`Тренировка: +${reward.workoutXp} XP`}${reward.weekXp?`<br>Неделя силы: +${reward.weekXp} XP`:''}</div><div class="reward-rank">Уровень ${p.level} · <b>${p.rank}</b></div><div class="reward-meter">${xpMeter(p)}</div>${reward.badges.length?`<div class="reward-badges">${reward.badges.map(b=>`<div class="reward-badge">${medal(b)}<div><span>НОВАЯ МЕДАЛЬ</span><strong>${b.title}</strong></div></div>`).join('')}</div>`:''}${morning?'':creatineReminder(selected)+wellnessEditor(selected,'reward')}<button class="primary" data-dismiss-reward="true">Забрать награду</button>${saved?'':'<div class="reward-save-warning">Записи сейчас в памяти. Скачай резервную копию перед закрытием страницы.</div>'}`;
+        $('reward-dialog').showModal();
+      }
+      function motivation() {
+        const s=session();
+        let line='Восстановление сегодня. Сильные повторения завтра.';
+        if(s){
+          const c=T.stats(s);
+          line=s.completed?'Сегодня ты выполнил план. Это твой вклад в следующую победу.':
+            c.filled===c.total?'Каждый подход записан. Заверши тренировку — план выполнен.':
+            c.filled===0?'Твой следующий рекорд начинается с первого подхода. Начни.':
+            c.filled>=c.total/2?'Половина плана уже позади. Держи свой темп и закончи тренировку.':
+            'Ты уже начал. Один чистый подход за другим — так строится сила.';
+        }
+        $('motivation-line').textContent=line;
+        if($('coach-title')){
+          const c=T.stats(s);
+          $('coach-title').textContent=s.completed?'План выполнен.':c.filled===0?'Начни с одного.':c.filled===c.total?'Ты сделал это.':c.filled>=c.total/2?'Держи темп.':'Сила в повторении.';
+          $('coach-copy').textContent=s.completed?'Восстановись. Следующая тренировка — следующий шаг.':c.filled===0?'Первый подход запускает тренировку. Внимание на движение, затем запиши результат.':c.filled===c.total?'Все подходы зафиксированы. Заверши тренировку и сохрани этот день в истории.':`Уже ${c.filled} подходов в копилке. До полного плана осталось ${c.total-c.filled}. Продолжай в своём темпе.`;
+        }
+      }
+      function field(id,i,key,value,labelText){const weight=key==='weight',def=T.exercises[id];return `<label class="field ${weight?'weight-field':''}"><span>${labelText}</span><input type="number" inputmode="${weight?'decimal':'numeric'}" min="${weight?0:1}" max="${weight?1000:9999}" step="${weight?'any':1}" placeholder="—" value="${value??''}" data-exercise="${id}" data-set="${i}" data-field="${key}" aria-label="${escape(setName(id,i))}, подход ${i+1}, ${escape(weight?def.weight+', кг':key==='left'?'повторения левой ногой':key==='right'?'повторения правой ногой':'повторения')}"></label>`;}
+      function recordText(id,r){if(T.exercises[id].sides)return r.left||r.right?`Рекорд: Л ${r.left||'—'} / П ${r.right||'—'}`:'Первый рекорд впереди';return r.reps?`Рекорд: ${r.reps} повт.`:'Первый рекорд впереди';}
+      function exerciseCard(id,index,s,rs){const def=T.exercises[id],e=s.exercises[id];return `<article class="exercise" id="exercise-${id}"><div class="exercise-heading"><span class="exercise-num">${String(index+1).padStart(2,'0')}</span><div class="exercise-title"><h3>${def.name}</h3><p>${def.note}</p></div>${def.range?`<label class="set-count"><select data-target="${id}" aria-label="${def.name}, количество подходов">${def.range.map(n=>`<option value="${n}" ${n===e.target?'selected':''}>${n}</option>`).join('')}</select><span>подх.</span></label>`:''}</div><div class="set-grid ${def.sides?'lunges-grid':''}">${e.sets.slice(0,e.target).map((set,i)=>`<div class="set ${T.filledSet(id,set)?'filled':''}" data-tile="${id}-${i}"><div class="set-title"><span>Подход ${i+1}</span><span class="set-check" aria-hidden="true">${T.filledSet(id,set)?'✓':''}</span></div>${id==='abs'?`<div class="set-variant">${setVariant(id,i)}</div>`:''}${setComparison(id,i,set)}<div class="fields">${def.sides?field(id,i,'left',set.left,'Левая')+field(id,i,'right',set.right,'Правая'):field(id,i,'reps',set.reps,'Повторения')}</div>${field(id,i,'weight',set.weight,def.sides?'Вес, кг':'Вес, кг')}</div>`).join('')}</div><div class="exercise-footer"><span>${def.group} <span aria-hidden="true">·</span> <span id="filled-${id}">${e.sets.filter(set=>T.filledSet(id,set)).length} / ${e.target} подходов</span></span><span class="record-chip">${previousLabel(id)}</span></div></article>`;}
+      function nextTraining(){let d=T.addDays(selected,1);while(T.scheduledType(d)==='rest')d=T.addDays(d,1);return d;}
+      function renderWorkout(){
+        const chosen=type(),s=session();comparisonBaseline=chosen==='rest'?null:W.previousSession(data,selected,chosen);absComparisonBaseline=chosen==='rest'?null:W.previousExerciseSession(data,selected,chosen,'abs');
+        if(trainingActive()){renderTraining(s);return;}
+        const heading=`<div class="panel-heading"><div><div class="date-text">${escape(fmt(selected,{weekday:'long',day:'numeric',month:'long'}))}${selected===today?' · сегодня':''}</div><h2>${label(chosen)}</h2><p>${chosen==='rest'?'Отдых тоже часть твоего плана.':'Выполняй упражнения по порядку. Заполняй результат после каждого подхода.'}</p></div>${chosen!=='rest'?`<div class="type-switch" aria-label="Тип тренировки"><button class="type-btn ${chosen==='upper'?'active':''}" data-type="upper" aria-pressed="${chosen==='upper'}">Верх тела</button><button class="type-btn ${chosen==='lower'?'active':''}" data-type="lower" aria-pressed="${chosen==='lower'}">Низ тела</button></div>`:''}</div>`;
+        if(chosen==='rest'){const next=nextTraining();$('main').innerHTML=heading+`<div class="rest-card"><div class="rest-art" aria-hidden="true"><svg viewBox="0 0 64 64" fill="none" stroke="currentColor" stroke-width="2"><path d="M46 12c-20 0-31 8-31 23 0 10 8 16 16 13C46 43 49 26 46 12Z"/><path d="M19 49c4-12 11-22 20-29M28 31l10 1M25 38l-5-10"/></svg></div><div><h3>Восстанови силу.</h3><p>Прогуляйся или просто восстановись. Следующая тренировка — <b>${short(next)}, ${label(T.scheduledType(next)).toLowerCase()}</b>.</p><button class="ghost" data-date="${next}">Открыть следующую тренировку <span aria-hidden="true">↗</span></button></div></div><div class="extra-workout"><span>Тренируешься вне расписания?</span><button class="ghost" data-type="upper">Верх тела</button><button class="ghost" data-type="lower">Низ тела</button></div>`;return;}
+        const rs=T.records(data);$('main').innerHTML=heading+coachModeBar()+comparisonContext()+(s.completed?workoutReceipt(s):'')+`<div class="workout-layout"><div class="exercise-list">${focusMode()?focusCard(s):T.order[chosen].map((id,i)=>exerciseCard(id,i,s,rs)).join('')}${s.completed?wellnessEditor(selected):''}</div><aside class="sidebar"><div class="progress-card"><div class="eyebrow">Тренировка по шагам</div><div class="progress-value" id="progress-value"></div><div class="progress-track"><div class="progress-fill" id="progress-fill"></div></div><p class="progress-copy" id="progress-copy"></p><div class="reward-hint">${gameIcon('bolt')} Награда за финиш: +100 XP</div><button class="primary" id="complete">Завершить тренировку</button><button class="ghost list-rest-button" id="start-rest" ${s.completed?'disabled':''}>Запустить отдых · ${restSeconds()} сек.</button><small>Вес необязателен. Повторения нужны в каждом подходе.</small></div><div class="coach-card"><div class="eyebrow">Твой настрой</div><h3 id="coach-title">Начни с одного.</h3><p id="coach-copy"></p></div><div class="note-card"><h3>Тот же подход, новый день</h3><p>Сравниваем тот же номер подхода. Для пресса берём предыдущую завершённую тренировку любого типа, для остальных упражнений — предыдущий верх или низ. Повторения и вес показаны отдельно.</p></div><div class="note-card"><h3>Немного сильнее, чем раньше</h3><p>Когда готов, добавь повторения или вес. Для махов записывай вес одной гантели, для выпадов — общий вес.</p></div></aside></div>`;updateWorkout();renderRest();
+      }
+      function updateWorkout(){
+        const s=session();if(!s||!$('progress-value'))return;const count=T.stats(s),rs=T.records(data);
+        $('progress-value').innerHTML=`${count.filled}<span> / ${count.total}</span>`;$('progress-fill').style.width=(count.filled/count.total*100)+'%';$('progress-copy').textContent=s.completed?'Все подходы записаны. Тренировка завершена.':count.filled===count.total?'Все подходы записаны. Можно завершать.':`Записано ${count.filled} из ${count.total} подходов`;
+        if(invalidInputs())$('progress-copy').textContent='Исправь выделенные поля перед завершением.';
+        if($('complete')){$('complete').disabled=s.completed||count.filled!==count.total||invalidInputs();$('complete').classList.toggle('completed',s.completed);$('complete').textContent=s.completed?'Тренировка завершена ✓':'Завершить тренировку';}
+        for(const id of T.order[s.type]){const e=s.exercises[id];if($('filled-'+id))$('filled-'+id).textContent=`${e.sets.filter(set=>T.filledSet(id,set)).length} / ${e.target} подходов`;e.sets.forEach((set,i)=>{const tile=document.querySelector(`[data-tile="${id}-${i}"]`);if(tile){const current=Object.fromEntries(Array.from(tile.querySelectorAll('[data-field]'),f=>[f.dataset.field,f.value===''?null:Number(f.value)]));updateSetComparison(id,i,current);tile.classList.toggle('filled',T.filledSet(id,set));tile.querySelector('.set-check').textContent=T.filledSet(id,set)?'✓':'';}});}
+      }
+      function renderRecords(){const rs=W.statRecords(data);$('main').innerHTML=`<div class="panel-heading"><div><div class="date-text">Твои лучшие результаты</div><h2>Личные рекорды</h2><p>Максимальные значения за всё время.</p></div></div><div class="records-note">Повторения и вес — отдельные рекорды и могут относиться к разным подходам. Для выпадов считаются обе ноги. Пресс лёжа и на турнике — отдельные рекорды, которые учитывают верх и низ.</div><div class="record-grid">${W.statChoices(false).map(def=>{const r=rs[def.key],has=r.reps||r.left||r.right;return `<article class="record-card"><div class="eyebrow">${def.group}</div><h3>${def.name}</h3>${has?`<div class="record-number">${def.sides?`${r.left||'—'} / ${r.right||'—'}`:r.reps}<small>${def.sides?'повт. · левая / правая':'повторений за подход'}</small></div><div class="record-date">${def.sides?`Л: ${r.leftDate?short(r.leftDate):'—'} · П: ${r.rightDate?short(r.rightDate):'—'}`:fmt(r.date,{day:'numeric',month:'long',year:'numeric'})}</div>`:'<div class="record-number" style="color:#707c70">—</div><div class="record-date">Результат появится после первого подхода</div>'}<div class="record-weight">${def.weight}: <b>${r.weightDate!==null?numberText(r.weight)+' кг':'—'}</b>${r.weightDate?' · '+short(r.weightDate):''}</div></article>`;}).join('')}</div>`;}
+      function renderHistory(){const list=sessions();$('main').innerHTML=`<div class="panel-heading"><div><div class="date-text">Каждая запись имеет значение</div><h2>История тренировок</h2><p>Открывай любую тренировку, чтобы посмотреть или исправить результаты.</p></div></div>`+(list.length?`<div class="history-list">${list.map(s=>{const count=T.stats(s);return `<div class="history-row"><div class="history-date">${fmt(s.date,{day:'numeric',month:'long',year:'numeric'})}</div><div class="history-main"><strong>${label(s.type)}</strong><small>${count.filled} / ${count.total} подходов</small>${data.wellness?.[s.date]?.rating?`<span class="history-wellness">Самочувствие: ${moodLabels[data.wellness[s.date].rating-1]}</span>`:''}</div><span class="pill ${s.completed?'done':''}">${s.completed?'Завершена':'В процессе'}</span><button class="history-open" data-open="${s.date}:${s.type}" aria-label="Открыть ${label(s.type).toLowerCase()}, ${escape(fmt(s.date,{day:'numeric',month:'long',year:'numeric'}))}">Открыть ↗</button></div>`;}).join('')}</div>`:'<div class="empty-state"><h3>Первый подход. Первая запись. Твой старт.</h3><p>Открой тренировку и запиши повторения. Запись появится здесь автоматически.</p></div>');}
+      function captureUiDrafts(){
+        const wellness=new Map();
+        for(const panel of document.querySelectorAll('.wellness-card')){
+          if(!panel.getClientRects().length)continue;
+          const date=panel.dataset.wellnessDate,row=data.wellness?.[date]||{rating:null,note:''},chosen=panel.querySelector('input:checked'),textarea=panel.querySelector('textarea'),rating=chosen?Number(chosen.value):null,note=textarea.value;
+          if(rating!==row.rating||note!==row.note)wellness.set(date,{date,rating,note,focusNote:document.activeElement===textarea});
+        }
+        let goal=null;
+        if(view==='goals'&&$('goal-form')&&goalFormBaseline?.editingGoalId===editingGoalId){
+          const values=goalFieldValues();
+          if(JSON.stringify(values)!==JSON.stringify(goalFormBaseline.values))goal={editingGoalId,values,focusId:document.activeElement?.id};
+        }
+        return {wellness:[...wellness.values()],goal};
+      }
+      function goalFieldValues(){return Object.fromEntries(['goal-kind','goal-exercise','goal-metric','goal-target','goal-start','goal-end'].map(id=>[id,$(id)?.value??'']));}
+      function restoreUiDrafts(drafts){
+        if(!drafts)return;
+        for(const draft of drafts.wellness||[])for(const panel of document.querySelectorAll(`.wellness-card[data-wellness-date="${draft.date}"]`)){
+          for(const input of panel.querySelectorAll('input[type="radio"]'))input.checked=Number(input.value)===draft.rating;
+          const textarea=panel.querySelector('textarea');textarea.value=draft.note;panel.querySelector('.wellness-save-status').textContent='Изменения не сохранены';if(draft.focusNote)textarea.focus?.({preventScroll:true});
+        }
+        const goal=drafts.goal;
+        if(goal&&view==='goals'&&editingGoalId===goal.editingGoalId&&$('goal-form')){
+          for(const [id,value]of Object.entries(goal.values))if($(id))$(id).value=value;
+          updateGoalFields();if(goal.focusId&&Object.prototype.hasOwnProperty.call(goal.values,goal.focusId))$(goal.focusId)?.focus?.({preventScroll:true});
+        }
+      }
+      function render(uiDrafts=null){document.body.classList.toggle('training-mode',trainingActive());renderWeek();summary();document.querySelectorAll('[data-view]').forEach(b=>{const active=b.dataset.view===view;b.classList.toggle('active',active);b.setAttribute('aria-pressed',active);});if(view==='workout')renderWorkout();else if(view==='records')renderRecords();else if(view==='achievements')renderAchievements();else if(view==='progress')renderProgress();else if(view==='goals')renderGoals();else renderHistory();restoreUiDrafts(uiDrafts);motivation();renderRest();}
+      function syncToday(){
+        const currentDate=T.localDate();if(currentDate===today)return;
+        const s=session(),focused=document.activeElement?.matches('input,textarea,select');
+        const setDraft=focusDraft?.key.startsWith(coachKey()+':')&&Object.values(focusDraft.values).some(v=>v!==null);
+        const reviewDraft=Array.from(document.querySelectorAll('.wellness-card')).some(panel=>{
+          const row=data.wellness?.[panel.dataset.wellnessDate]||{rating:null,note:''},chosen=panel.querySelector('input:checked');
+          return panel.querySelector('textarea').value!==row.note||(chosen?Number(chosen.value):null)!==row.rating;
+        });
+        const editing=focused||view==='goals'||reviewDraft||$('reward-dialog').open||!!$('routine-editor')?.open||(view==='workout'&&invalidInputs());
+        const active=s&&!s.completed&&(T.hasData(s)||setDraft);
+        const change=T.dayRollover({today,selected,hold:!!(active||editing)},currentDate);
+        const moved=change.selected!==selected;today=change.today;selected=change.selected;if(moved)override=null;
+        if(editing){
+          renderWeek();summary();motivation();renderRest();
+          const heading=document.querySelector('#main > .panel-heading .date-text');
+          if(view==='workout'&&heading)heading.textContent=fmt(selected,{weekday:'long',day:'numeric',month:'long'})+(selected===today?' · сегодня':'');
+          const trainingHeading=document.querySelector('.training-heading .eyebrow');
+          if(view==='workout'&&trainingHeading)trainingHeading.textContent=label(type())+' · '+fmt(selected)+(selected===today?' · сегодня':'');
+          const goalList=document.querySelector('.goal-list');if(view==='goals'&&goalList)goalList.innerHTML=goalCardsHtml();
+        }else render();
+      }
+      function chooseDate(d){try{T.parseDate(d);}catch(e){toast('Выбери корректную дату');return;}selected=d;override=null;view='workout';render();}
+      document.addEventListener('click',event=>{
+        const b=event.target.closest('button');if(!b)return;if(handleCoachClick(b,event))return;
+        if(b.dataset.dismissReward){$('reward-dialog').close();return;}
+        if(b.id==='save-morning-plan'){
+          try{data=H.setPlan(data,$('morning-plan').value);const saved=save();renderHabits();$('routine-editor').open=false;toast(saved?'Твой комплекс сохранён.':'Комплекс сохранён в памяти. Скачай копию записей.');}catch(error){toast(error.message);}
+          return;
+        }
+        if(b.dataset.date){chooseDate(b.dataset.date);return;}
+        if(b.dataset.type){override=b.dataset.type;view='workout';render();return;}
+        if(b.dataset.view){view=b.dataset.view;render();return;}
+        if(b.dataset.open){const [d,t]=b.dataset.open.split(':');selected=d;override=t;view='workout';render();return;}
+        if(b.id==='complete')finishWorkout();
+      });
+      document.addEventListener('change',event=>{
+        const input=event.target;if(handleCoachChange(input))return;if(!input.dataset.habit)return;
+        const kind=input.dataset.habit,date=input.dataset.habitDate,done=input.checked,before=G.summarize(data,today);
+        try{
+          const drafts=captureUiDrafts();data=H.set(data,date,kind,done);
+          const saved=save();render(drafts);
+          if(kind==='morning'&&done)showReward(before,saved,'morning');
+          else{
+            if($('reward-creatine'))$('reward-creatine').checked=H.state(data,date).creatine;
+            if($('post-reminder-copy'))$('post-reminder-copy').textContent=done?'Приём креатина отмечен за эту дату.':'Приём креатина ещё не отмечен.';
+            toast(saved?(done?'Отметка сохранена.':'Отметка снята.'):'Отметка в памяти. Скачай копию записей.');
+          }
+        }catch(error){input.checked=H.state(data,date)[kind];toast(error.message);}
+      });
+      $('main').addEventListener('input',event=>{
+        const input=event.target,wellness=input.closest?.('.wellness-card');if(wellness){wellness.querySelector('.wellness-save-status').textContent='Изменения не сохранены';return;}if(input.id==='rest-seconds'){if(input.validity.valid&&input.value!==''&&Number(input.value)!==restSeconds()){data=W.setSettings(data,{restSeconds:Number(input.value)});save();if($('start-rest'))$('start-rest').textContent='Запустить отдых · '+restSeconds()+' сек.';}return;}if(!input.dataset.field)return;if(input.closest('#focus-panel')){const panel=$('focus-panel'),values={};for(const f of panel.querySelectorAll('[data-field]'))values[f.dataset.field]=f.value===''?null:Number(f.value);focusDraft={key:coachKey()+':'+panel.dataset.currentExercise+':'+panel.dataset.currentSet,values};updateSetComparison(panel.dataset.currentExercise,Number(panel.dataset.currentSet),values);tickRest();return;}if(focusDraft?.key===coachKey()+':'+input.dataset.exercise+':'+input.dataset.set)focusDraft=null;if(!input.validity.valid){input.setAttribute('aria-invalid','true');$('save-status').textContent='Проверь выделенное поле: значение не сохранено';$('save-status').classList.add('error');updateWorkout();return;}input.removeAttribute('aria-invalid');const raw=input.value,value=raw===''?null:Number(raw);const s=session();s.exercises[input.dataset.exercise].sets[Number(input.dataset.set)][input.dataset.field]=value;s.updatedAt=Math.max(Date.now(),s.updatedAt+1);const count=T.stats(s);if(count.filled!==count.total)s.completed=false;data.sessions[selected+':'+type()]=s;save();summary();updateWorkout();motivation();
+      });
+      $('main').addEventListener('change',event=>{const select=event.target;if(!select.dataset.target)return;const id=select.dataset.target,s=session(),e=s.exercises[id],target=Number(select.value);if(target<e.target&&e.sets.slice(target).some(set=>Object.values(set).some(v=>v!==null))){select.value=String(e.target);toast('Сначала очисти результаты в лишних подходах');return;}const old=e.target;e.target=target;if(target>old)for(let i=old;i<target;i++)e.sets.push({reps:null,weight:null});else e.sets=e.sets.slice(0,target);s.updatedAt=Math.max(Date.now(),s.updatedAt+1);if(T.stats(s).filled!==T.stats(s).total)s.completed=false;data.sessions[selected+':'+type()]=s;save();render();});
+      function updateScreenButton(){
+        const active=!!(document.fullscreenElement||document.webkitFullscreenElement);
+        $('fullscreen').setAttribute('aria-pressed',String(active));
+        $('fullscreen').setAttribute('aria-label',active?'Выйти из полноэкранного режима':'На весь экран');
+        $('fullscreen').title=active?'Выйти из полноэкранного режима':'На весь экран';
+        $('fullscreen-label').textContent=active?'Выйти из режима':'На весь экран';
+      }
+      $('fullscreen').onclick=async()=>{try{await WorkoutScreen.toggle(document);updateScreenButton();}catch(error){toast('Полноэкранный режим недоступен в этом браузере. Разверни окно — страница занимает всю его ширину.');}};
+      document.addEventListener('fullscreenchange',updateScreenButton);
+      document.addEventListener('webkitfullscreenchange',updateScreenButton);
+      updateScreenButton();
+      $('date-picker').addEventListener('change',e=>{if(e.target.value)chooseDate(e.target.value);});$('today').onclick=()=>{syncToday();chooseDate(today);};$('prev-week').onclick=()=>chooseDate(T.addDays(selected,-7));$('next-week').onclick=()=>chooseDate(T.addDays(selected,7));
+      $('export').onclick=exportBackup;
+      $('import').onclick=()=>$('import-file').click();$('import-file').addEventListener('change',async e=>{const file=e.target.files[0];if(!file)return;try{if(file.size>15*1024*1024)throw Error('Размер копии должен быть меньше 15 МБ');const incoming=T.readBackup(await file.text()),drafts=captureUiDrafts();data=T.merge(data,incoming);const saved=save();render(drafts);toast(saved?'Копия загружена. Записи объединены.':'Копия открыта в памяти. Скачай её перед закрытием.');}catch(error){toast('Не удалось загрузить копию: '+error.message);}finally{e.target.value='';}});
+      window.addEventListener('storage',event=>{if(event.key!==KEY)return;try{const drafts=captureUiDrafts();if(event.newValue)data=T.merge(data,T.readBackup(event.newValue));render(drafts);}catch(e){toast('Не удалось обновить журнал из другой вкладки');}});
+      document.addEventListener('submit',event=>{if(event.target.id==='goal-form'){event.preventDefault();$('save-goal').click();}});
+      document.addEventListener('visibilitychange',()=>{syncToday();tickRest();renderBackup();});window.addEventListener('focus',()=>{syncToday();tickRest();renderBackup();});setInterval(()=>{syncToday();tickRest();},1000);setInterval(renderBackup,60000);let chartResize;window.addEventListener('resize',()=>{clearTimeout(chartResize);chartResize=setTimeout(()=>{if(view==='progress')renderProgress();},100);});
+      render();
+    })();
+  </script>
+</body>
+</html>

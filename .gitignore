@@ -218,3 +218,12 @@ __marimo__/
 
 # Streamlit
 .streamlit/secrets.toml
+
+# Tracker development and personal backup files
+.DS_Store
+node_modules/
+.env.*
+exports/
+backups/
+svoi-temp*.json
+*.backup.json
