@@ -4,7 +4,7 @@ const fs=require('node:fs');
 const vm=require('node:vm');
 const html=fs.readFileSync(require('node:path').join(__dirname,'../index.html'),'utf8');
 const ctx=vm.createContext({});
-for(const id of ['tracker-core','habits-core','game-core']){
+for(const id of ['tracker-core','habits-core','coach-core','game-core']){
   const script=html.match(new RegExp('<script id="'+id+'">([\\s\\S]*?)<\\/script>'));
   if(script)vm.runInContext(script[1],ctx);
 }

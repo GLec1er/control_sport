@@ -4,7 +4,7 @@ const fs = require('node:fs');
 const vm = require('node:vm');
 const html = fs.readFileSync(require('node:path').join(__dirname, '../index.html'), 'utf8');
 const ctx = vm.createContext({});
-for (const id of ['tracker-core', 'game-core']) {
+for (const id of ['tracker-core', 'habits-core', 'coach-core', 'game-core']) {
   const script = html.match(new RegExp('<script id="' + id + '">([\\s\\S]*?)<\\/script>'));
   if (script) vm.runInContext(script[1], ctx);
 }
@@ -97,6 +97,6 @@ test('Weekly rewards work across a year boundary', () => {
   const data = journal([['2026-12-28','upper'],['2026-12-29','lower'],['2026-12-31','upper'],['2027-01-01','lower']]);
   const profile = game().summarize(data, '2027-01-02');
   assert.equal(profile.xp, 600);
-  assert.equal(G.challenge(data, '2027-01-01').done, true);
+  assert.equal(G.challenge(data, '2027-01-01', '2027-01-02').done, true);
   assert.equal(profile.streak, 4);
 });
